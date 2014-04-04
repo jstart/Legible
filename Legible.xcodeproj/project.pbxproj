@@ -11,7 +11,13 @@
 		4BEA287464C9455FA505173C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08068DFBAE2242BD94396D8A /* libPods-unit_tests.a */; };
 		5725CA73579B4337897A4BCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DC6A9F8D8149D4A4BB08D5 /* main.m */; };
 		699BFC95CE6D475784108ED3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F0C3F3EEBB43658AED1638 /* Images.xcassets */; };
+		7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6775EBE9344211AE4DA59A /* libPods.a */; };
 		99A671595652453691C40955 /* LEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8006846039646548E17CD37 /* LEGAppDelegate.m */; };
+		AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */; };
+		AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */; };
+		AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */; };
+		AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */; };
+		AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +34,20 @@
 		08068DFBAE2242BD94396D8A /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3448C747F4874A9282744186 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		529C3067509049E290A19782 /* Pods-unit_tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.xcconfig"; path = "Pods/Pods-unit_tests.xcconfig"; sourceTree = "<group>"; };
+		5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		61D38EFE23D0470AA541DD17 /* Legible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Legible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C3ECDC7E644D39B2AA0CD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		9F6775EBE9344211AE4DA59A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2735D05CA504DA2889505EE /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		A8006846039646548E17CD37 /* LEGAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEGAppDelegate.m; sourceTree = "<group>"; };
+		AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub"; sourceTree = "<group>"; };
+		AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGMainViewController.h; sourceTree = "<group>"; };
+		AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGMainViewController.m; sourceTree = "<group>"; };
+		AD1D42A118EDD15A00EADCA6 /* LEGPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGPageViewController.h; sourceTree = "<group>"; };
+		AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGPageViewController.m; sourceTree = "<group>"; };
+		AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubDataSource.h; sourceTree = "<group>"; };
+		AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubDataSource.m; sourceTree = "<group>"; };
+		AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C8E71C55987E49AA943A95C5 /* Legible-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Legible-Prefix.pch"; sourceTree = "<group>"; };
 		D40459F5761C4367A14ED92C /* LEGAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEGAppDelegate.h; sourceTree = "<group>"; };
 		D7BC8CE945154D1F81A18BCF /* Legible-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Legible-Info.plist"; sourceTree = "<group>"; };
@@ -54,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277083C4A62D4D6BA7E8A79B /* Foundation.framework in Frameworks */,
+				7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +108,7 @@
 			children = (
 				12AFD429368A4989A66AD193 /* iOS */,
 				08068DFBAE2242BD94396D8A /* libPods-unit_tests.a */,
+				9F6775EBE9344211AE4DA59A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +154,8 @@
 		41745037089642B7B8A946ED /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */,
+				AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -197,6 +217,7 @@
 				15C872F4671D4B5E8DEC7F3B /* Frameworks */,
 				668B25382EE3444B9585C683 /* Products */,
 				529C3067509049E290A19782 /* Pods-unit_tests.xcconfig */,
+				5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -213,6 +234,8 @@
 		9DE32C13D0914FFFAEB49A67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D42A718EE114500EADCA6 /* Core Data */,
+				AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
 				E3F0C3F3EEBB43658AED1638 /* Images.xcassets */,
 				E4B5654CABBB41C6AB93E12D /* Storyboards */,
 				1746632051DF400A9007F630 /* Nibs */,
@@ -221,9 +244,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AD1D42A718EE114500EADCA6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		CB8FA19D5E0849798909FD4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */,
+				AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */,
+				AD1D42A118EDD15A00EADCA6 /* LEGPageViewController.h */,
+				AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,10 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1331883583A74BF8B522B17C /* Build configuration list for PBXNativeTarget "Legible" */;
 			buildPhases = (
+				DB7355F2D2524E36A1280B91 /* Check Pods Manifest.lock */,
 				C64C72F460A649AA9DA91A5F /* Sources */,
 				6730A08B32A043E3B5AB36C5 /* Frameworks */,
 				E5B1D839498B46C28B1906E0 /* Resources */,
 				1E4D6D5C349B425ABA400B34 /* Warn for TODO and FIXME comments */,
+				D6CC4A3C0E1E46EC8E926ECC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699BFC95CE6D475784108ED3 /* Images.xcassets in Resources */,
+				AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +383,36 @@
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		BB72E55DB1A5498ABD5EF5D1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6CC4A3C0E1E46EC8E926ECC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7355F2D2524E36A1280B91 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,8 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */,
 				99A671595652453691C40955 /* LEGAppDelegate.m in Sources */,
+				AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */,
+				AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */,
 				5725CA73579B4337897A4BCF /* main.m in Sources */,
+				AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +498,7 @@
 		};
 		60A9A3117B3543B0BBEF9BD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -453,6 +526,7 @@
 		};
 		6FDA8C36AEA646F39BA91333 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -626,6 +700,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */,
+			);
+			currentVersion = AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "Core Data/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F0AFA0214D27462FA74E7269 /* Project object */;
 }

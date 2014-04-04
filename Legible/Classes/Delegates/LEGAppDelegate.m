@@ -8,6 +8,19 @@
 
 #import "LEGAppDelegate.h"
 
+#import "LEGMainViewController.h"
+
 @implementation LEGAppDelegate
+
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    LEGMainViewController * mainVC = [[LEGMainViewController alloc] init];
+    self.window.rootViewController = mainVC;
+    
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
 
 @end
