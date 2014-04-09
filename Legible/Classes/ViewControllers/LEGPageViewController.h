@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class KFEpubController;
+@class LEGEpubContentPager, LEGEpubChapter, DTAttributedTextView;
 
 @interface LEGPageViewController : UIViewController
 
-@property (nonatomic, strong) UITextView * textView;
+@property (nonatomic, strong) DTAttributedTextView * textView;
+@property (nonatomic, strong) UIWebView * webView;
 @property (nonatomic, strong) NSNumber * pageIndex;
 
-+(LEGPageViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubController:(KFEpubController *) epubController;
++(LEGPageViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size;
++(LEGPageViewController *)pageViewControllerAtChapterIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size;
 
 @end

@@ -7,7 +7,192 @@
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="RDMLAbstractLibraryItem" representedClassName="RDMLAbstractLibraryItem" isAbstract="YES" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="colorIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileURL" optional="YES" attributeType="Transformable" valueTransformerName="RDMLURLBookmarkTransformer" syncable="YES"/>
+        <attribute name="libraryItemId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uniqueHash" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="libraryItems" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLACSMLibraryItem" representedClassName="RDMLACSMLibraryItem" parentEntity="RDMLAbstractLibraryItem" syncable="YES">
+        <attribute name="isFulfillmentNeeded" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="provider" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="libraryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDMLLibraryItem" inverseName="acsm" inverseEntity="RDMLLibraryItem" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLAsset" representedClassName="RDMLAsset" syncable="YES">
+        <attribute name="acquisitionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uriString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vendor" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="book" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLBook" inverseName="assets" inverseEntity="RDMLBook" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLBook" representedClassName="RDMLBook" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="activeAndFinishedReadingsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="author" attributeType="String" syncable="YES"/>
+        <attribute name="averageDuration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="bookId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="coverPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalCoverSizeString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalinkURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceSegment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="publisher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readingsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="recommendedReadingsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="story" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="assets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RDMLAsset" inverseName="book" inverseEntity="RDMLAsset" indexed="YES" syncable="YES"/>
+        <relationship name="readings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RDMLReading" inverseName="book" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLLibraryItem" representedClassName="RDMLLibraryItem" parentEntity="RDMLAbstractLibraryItem" syncable="YES">
+        <attribute name="expirationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDRMProtected" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="isPasswordRequired" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="isSuitableForLibrary" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <relationship name="acsm" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="RDMLACSMLibraryItem" inverseName="libraryItems" inverseEntity="RDMLACSMLibraryItem" indexed="YES" syncable="YES"/>
+        <relationship name="reading" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="RDMLReading" inverseName="libraryItem" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLReading" representedClassName="RDMLReading" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="abandonedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="averagePeriodTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="bookmark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closingRemark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="creationDate" attributeType="Date" syncable="YES"/>
+        <attribute name="currentPageNr" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="estimatedTimeLeft" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="finishedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="highlightsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isRecommended" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastReadDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="permalinkURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="positionUpdatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="readingId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="readingState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeSpent" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <relationship name="book" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLBook" inverseName="readings" inverseEntity="RDMLBook" indexed="YES" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMHighlightComment" inverseName="reading" inverseEntity="RMHighlightComment" indexed="YES" syncable="YES"/>
+        <relationship name="connections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RMConnection" inverseName="readings" inverseEntity="RMConnection" indexed="YES" syncable="YES"/>
+        <relationship name="highlights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMHighlight" inverseName="reading" inverseEntity="RMHighlight" indexed="YES" syncable="YES"/>
+        <relationship name="libraryItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLLibraryItem" inverseName="reading" inverseEntity="RDMLLibraryItem" indexed="YES" syncable="YES"/>
+        <relationship name="periods" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMPeriod" inverseName="reading" inverseEntity="RMPeriod" indexed="YES" syncable="YES"/>
+        <relationship name="user" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="readings" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RDMLUser" representedClassName="RDMLUser" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="avatarURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="booksAbandonedCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="booksFinishedCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="booksInterestingCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="booksReadingCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followersCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="followingsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isExternal" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalinkURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="websiteURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="connections" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMConnection" inverseName="user" inverseEntity="RMConnection" indexed="YES" syncable="YES"/>
+        <relationship name="followers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="followings" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+        <relationship name="followings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="followers" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+        <relationship name="highlightComments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMHighlightComment" inverseName="user" inverseEntity="RMHighlightComment" indexed="YES" syncable="YES"/>
+        <relationship name="libraryItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RDMLAbstractLibraryItem" inverseName="user" inverseEntity="RDMLAbstractLibraryItem" indexed="YES" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMLike" inverseName="user" inverseEntity="RMLike" indexed="YES" syncable="YES"/>
+        <relationship name="readings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RDMLReading" inverseName="user" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMConnection" representedClassName="RMConnection" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="postHighlight" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="postReading" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="service" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="highlights" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RMHighlight" inverseName="connections" inverseEntity="RMHighlight" indexed="YES" syncable="YES"/>
+        <relationship name="readings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDMLReading" inverseName="connections" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="connections" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMHighlight" representedClassName="RMHighlight" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="bookmarkEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookmarkStart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="highlightedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="highlightId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isCopyRestricted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="localId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locators" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="permalinkURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="postToServiceIds" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMHighlightComment" inverseName="highlight" inverseEntity="RMHighlightComment" indexed="YES" syncable="YES"/>
+        <relationship name="connections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RMConnection" inverseName="highlights" inverseEntity="RMConnection" indexed="YES" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RMLikeHighlight" inverseName="highlight" inverseEntity="RMLikeHighlight" indexed="YES" syncable="YES"/>
+        <relationship name="reading" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLReading" inverseName="highlights" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMHighlightComment" representedClassName="RMHighlightComment" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="highlightCommentId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isAssociated" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="postedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="readingId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="highlight" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RMHighlight" inverseName="comments" inverseEntity="RMHighlight" indexed="YES" syncable="YES"/>
+        <relationship name="reading" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLReading" inverseName="comments" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="highlightComments" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMLike" representedClassName="RMLike" isAbstract="YES" parentEntity="RMManagedObject" syncable="YES">
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLUser" inverseName="likes" inverseEntity="RDMLUser" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMLikeHighlight" representedClassName="RMLikeHighlight" parentEntity="RMLike" syncable="YES">
+        <relationship name="highlight" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RMHighlight" inverseName="likes" inverseEntity="RMHighlight" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RMManagedObject" representedClassName="RMManagedObject" isAbstract="YES" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" defaultDateTimeInterval="416854981" syncable="YES"/>
+        <attribute name="deletedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isSyncing" optional="YES" transient="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="syncedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="touchedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="RMPeriod" representedClassName="RMPeriod" parentEntity="RMManagedObject" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periodId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="startedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="reading" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RDMLReading" inverseName="periods" inverseEntity="RDMLReading" indexed="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Book" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="RMManagedObject" positionX="-54" positionY="27" width="128" height="135"/>
+        <element name="RDMLAbstractLibraryItem" positionX="-36" positionY="36" width="128" height="180"/>
+        <element name="RMHighlight" positionX="-18" positionY="45" width="128" height="315"/>
+        <element name="RDMLReading" positionX="0" positionY="54" width="128" height="450"/>
+        <element name="RDMLAsset" positionX="18" positionY="63" width="128" height="105"/>
+        <element name="RDMLUser" positionX="36" positionY="81" width="128" height="450"/>
+        <element name="RDMLBook" positionX="-9" positionY="36" width="128" height="315"/>
+        <element name="RMPeriod" positionX="0" positionY="45" width="128" height="135"/>
+        <element name="RDMLACSMLibraryItem" positionX="9" positionY="54" width="128" height="90"/>
+        <element name="RMLikeHighlight" positionX="18" positionY="63" width="128" height="60"/>
+        <element name="RDMLLibraryItem" positionX="27" positionY="72" width="128" height="135"/>
+        <element name="RMLike" positionX="36" positionY="81" width="128" height="60"/>
+        <element name="RMHighlightComment" positionX="45" positionY="90" width="128" height="195"/>
+        <element name="RMConnection" positionX="-9" positionY="36" width="128" height="150"/>
     </elements>
 </model>

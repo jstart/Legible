@@ -11,22 +11,30 @@
 #import <KFEpubKit/KFEpubKit.h>
 
 #import "LEGPageViewController.h"
+#import "LEGEpubContentPager.h"
+#import "LEGEpubChapter.h"
+
+#define LEG_PAGE_SIZE CGSizeMake(320-10, 568-10)
 
 @interface LEGMainViewController ()<KFEpubControllerDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic, strong) KFEpubController * epubController;
 @property (nonatomic, strong) UIPageViewController * pageVC;
 @property (nonatomic, strong) NSMutableArray * viewControllers;
+@property (nonatomic, strong) LEGEpubContentPager * epubContentPager;
+@property (nonatomic, strong) NSMutableArray * chapterArray;
+@property (nonatomic, strong) NSNumber * currentChapterIndex;
+@property (nonatomic, strong) NSString * epubFileName;
 
 @end
 
 @implementation LEGMainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(instancetype)initWithFileName:(NSString *)fileName;
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.epubFileName = fileName;
     }
     return self;
 }
@@ -34,15 +42,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.viewControllers = [NSMutableArray array];
+    self.chapterArray = [NSMutableArray array];
+    self.currentChapterIndex = @(0);
     
-    // Do any additional setup after loading the view.
-    NSURL *epubURL = [[NSBundle mainBundle] URLForResource:@"Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon" withExtension:@"epub"];
+    NSURL *epubURL = [[NSBundle mainBundle] URLForResource:self.epubFileName withExtension:@"epub"];
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     self.epubController = [[KFEpubController alloc] initWithEpubURL:epubURL andDestinationFolder:documentsURL];
     self.epubController.delegate = self;
     [self.epubController openAsynchronous:YES];
+    
+    self.epubContentPager = [[LEGEpubContentPager alloc] initWithEpubController:self.epubController];
     
     self.pageVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.pageVC.view setFrame:self.view.bounds];
@@ -53,6 +65,21 @@
     [self addChildViewController:self.pageVC];
     [self.view addSubview:self.pageVC.view];
     [self.pageVC didMoveToParentViewController:self];
+    
+    UITapGestureRecognizer * tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.pageVC.view addGestureRecognizer:tapGestureRec];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+}
+
+-(void)tap{
+    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+    BOOL statusBarHidden = [[UIApplication sharedApplication] isStatusBarHidden];
+    [[UIApplication sharedApplication] setStatusBarHidden:!statusBarHidden withAnimation:UIStatusBarAnimationSlide];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +93,7 @@
     if ((int)[self.viewControllers count] - 1 >= index) {
         return (LEGPageViewController *)[self.viewControllers objectAtIndex:index];
     }else{
-        pageVC = [LEGPageViewController pageViewControllerAtIndex:(index) epubController:self.epubController];
+        pageVC = [LEGPageViewController pageViewControllerAtChapterIndex:index epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
         [self.viewControllers insertObject:pageVC atIndex:index];
     }
     return pageVC;
@@ -77,9 +104,14 @@
 
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
-    LEGPageViewController * pageVC = [LEGPageViewController pageViewControllerAtIndex:0 epubController:self.epubController];
-    [self.pageVC setViewControllers:@[pageVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    [self.viewControllers addObject:pageVC];
+    [self.epubContentPager processWithSize:LEG_PAGE_SIZE andProgressBlock:^(LEGEpubChapter * chapter){
+        if ([chapter.chapterIndex integerValue] == 0) {
+            LEGPageViewController * pageVC = [LEGPageViewController pageViewControllerAtChapterIndex:0 epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
+            [self.pageVC setViewControllers:@[pageVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+            [self.viewControllers addObject:pageVC];
+        }
+        [self.chapterArray addObject:chapter];
+    }];
 }
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error{

@@ -8,15 +8,16 @@
 
 #import "LEGAppDelegate.h"
 
-#import "LEGMainViewController.h"
+#import "LEGLibraryTableViewController.h"
 
 @implementation LEGAppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LEGMainViewController * mainVC = [[LEGMainViewController alloc] init];
-    self.window.rootViewController = mainVC;
+    LEGLibraryTableViewController * libraryTableVC = [[LEGLibraryTableViewController alloc] init];
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:libraryTableVC];
+    self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
     

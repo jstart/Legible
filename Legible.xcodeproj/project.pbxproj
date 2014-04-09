@@ -18,6 +18,27 @@
 		AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */; };
 		AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */; };
 		AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */; };
+		AD1D42B318EE399300EADCA6 /* LEGEpubContentPager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */; };
+		AD1D42B518EF309100EADCA6 /* tolstoy-war-and-peace.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */; };
+		AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */; };
+		AD1D42BE18EF6F2500EADCA6 /* LEGLibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */; };
+		AD1D42D018F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */; };
+		AD1D42D118F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */; };
+		AD1D42D218F35AC200EADCA6 /* Daniel H. Pink - Drive.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */; };
+		AD1D42D318F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */; };
+		AD1D42D418F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */; };
+		AD1D42D518F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */; };
+		AD1D42D618F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */; };
+		AD1D42D718F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */; };
+		AD1D42D818F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */; };
+		AD1D42D918F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */; };
+		AD1D42DA18F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */; };
+		AD1D42DB18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */; };
+		AD1D42DC18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */; };
+		AD1D42DD18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */; };
+		AD1D42DE18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */; };
+		AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */; };
+		AD1D42E018F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +69,30 @@
 		AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubDataSource.h; sourceTree = "<group>"; };
 		AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubDataSource.m; sourceTree = "<group>"; };
 		AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AD1D42B118EE399300EADCA6 /* LEGEpubContentPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubContentPager.h; sourceTree = "<group>"; };
+		AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubContentPager.m; sourceTree = "<group>"; };
+		AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tolstoy-war-and-peace.epub"; sourceTree = "<group>"; };
+		AD1D42B618EF385C00EADCA6 /* LEGEpubChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubChapter.h; sourceTree = "<group>"; };
+		AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubChapter.m; sourceTree = "<group>"; };
+		AD1D42BC18EF6F2500EADCA6 /* LEGLibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGLibraryTableViewController.h; sourceTree = "<group>"; };
+		AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGLibraryTableViewController.m; sourceTree = "<group>"; };
+		AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub"; sourceTree = "<group>"; };
+		AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub"; sourceTree = "<group>"; };
+		AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Daniel H. Pink - Drive.epub"; sourceTree = "<group>"; };
+		AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frank Chimero - The Shape of Design.epub"; sourceTree = "<group>"; };
+		AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub"; sourceTree = "<group>"; };
+		AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub"; sourceTree = "<group>"; };
+		AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jules Verne - Around the World in Eighty Days.epub"; sourceTree = "<group>"; };
+		AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khang Vo - Pro iOS Apps Performance Optimization.epub"; sourceTree = "<group>"; };
+		AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kyle Loudon - Mastering Algorithms with C.epub"; sourceTree = "<group>"; };
+		AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marcin Treder - UX Design for Startups.epub"; sourceTree = "<group>"; };
+		AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf"; sourceTree = "<group>"; };
+		AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub"; sourceTree = "<group>"; };
+		AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Steve Krug - Don't Make Me Think.epub"; sourceTree = "<group>"; };
+		AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Steve S. Skiena - The Algorithm Design Manual.pdf"; sourceTree = "<group>"; };
+		AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sun Tzu - The Art of War.epub"; sourceTree = "<group>"; };
+		AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub"; sourceTree = "<group>"; };
+		AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub"; sourceTree = "<group>"; };
 		C8E71C55987E49AA943A95C5 /* Legible-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Legible-Prefix.pch"; sourceTree = "<group>"; };
 		D40459F5761C4367A14ED92C /* LEGAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEGAppDelegate.h; sourceTree = "<group>"; };
 		D7BC8CE945154D1F81A18BCF /* Legible-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Legible-Info.plist"; sourceTree = "<group>"; };
@@ -91,6 +136,8 @@
 		0BC35F5FE71E4DC79649AF74 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D42B618EF385C00EADCA6 /* LEGEpubChapter.h */,
+				AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +201,8 @@
 		41745037089642B7B8A946ED /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D42B118EE399300EADCA6 /* LEGEpubContentPager.h */,
+				AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */,
 				AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */,
 				AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */,
 			);
@@ -236,6 +285,24 @@
 			children = (
 				AD1D42A718EE114500EADCA6 /* Core Data */,
 				AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
+				AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */,
+				AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */,
+				AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */,
+				AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */,
+				AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */,
+				AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */,
+				AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */,
+				AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */,
+				AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */,
+				AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */,
+				AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */,
+				AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */,
+				AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */,
+				AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */,
+				AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */,
+				AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */,
+				AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */,
+				AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */,
 				E3F0C3F3EEBB43658AED1638 /* Images.xcassets */,
 				E4B5654CABBB41C6AB93E12D /* Storyboards */,
 				1746632051DF400A9007F630 /* Nibs */,
@@ -259,6 +326,8 @@
 				AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */,
 				AD1D42A118EDD15A00EADCA6 /* LEGPageViewController.h */,
 				AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */,
+				AD1D42BC18EF6F2500EADCA6 /* LEGLibraryTableViewController.h */,
+				AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -361,7 +430,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				699BFC95CE6D475784108ED3 /* Images.xcassets in Resources */,
+				AD1D42D318F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub in Resources */,
+				AD1D42D418F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */,
+				AD1D42D918F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub in Resources */,
+				AD1D42D518F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */,
+				AD1D42D218F35AC200EADCA6 /* Daniel H. Pink - Drive.epub in Resources */,
+				AD1D42DC18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub in Resources */,
+				AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */,
+				AD1D42D018F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */,
+				AD1D42D818F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */,
+				AD1D42DD18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf in Resources */,
+				AD1D42D718F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */,
 				AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */,
+				AD1D42DB18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */,
+				AD1D42D118F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */,
+				AD1D42D618F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub in Resources */,
+				AD1D42E018F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */,
+				AD1D42B518EF309100EADCA6 /* tolstoy-war-and-peace.epub in Resources */,
+				AD1D42DE18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub in Resources */,
+				AD1D42DA18F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +544,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */,
+				AD1D42BE18EF6F2500EADCA6 /* LEGLibraryTableViewController.m in Sources */,
 				99A671595652453691C40955 /* LEGAppDelegate.m in Sources */,
 				AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */,
 				AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */,
 				5725CA73579B4337897A4BCF /* main.m in Sources */,
 				AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */,
+				AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */,
+				AD1D42B318EE399300EADCA6 /* LEGEpubContentPager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,13 @@
 PODS:
-  - Dropbox-iOS-SDK (1.3.10)
+  - DTCoreText (1.6.11):
+    - DTFoundation/Core (~> 1.6.1)
+    - DTFoundation/DTHTMLParser (~> 1.6.1)
+    - DTFoundation/UIKit (~> 1.6.1)
+  - DTFoundation/Core (1.6.2)
+  - DTFoundation/DTHTMLParser (1.6.2):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.6.2):
+    - DTFoundation/Core
   - Expecta (0.3.0)
   - KFEpubKit (0.0.6):
     - KissXML
@@ -10,14 +18,19 @@ PODS:
   - SSZipArchive (0.3.1)
 
 DEPENDENCIES:
-  - Dropbox-iOS-SDK (~> 1.3)
+  - DTCoreText
   - Expecta
-  - KFEpubKit (~> 0.0)
+  - KFEpubKit (from `../KFEpubKit`)
   - OCMock
   - Specta
 
+EXTERNAL SOURCES:
+  KFEpubKit:
+    :path: ../KFEpubKit
+
 SPEC CHECKSUMS:
-  Dropbox-iOS-SDK: c3f646025b276846a5c481621753d7819abc1c36
+  DTCoreText: 4d56bb74ff05a3b2415fc15fccc4b5689ed3119c
+  DTFoundation: 7c69990fa3cb7655cafa95ab59c3fcea014460f0
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
   KFEpubKit: 266edc8eae65740e628c6d9a55c355f148ccd8e1
   KissXML: 4c66b6f39ef49c23e6bb8d335b94136f12b1b615

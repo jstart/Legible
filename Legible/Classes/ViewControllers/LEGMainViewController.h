@@ -10,4 +10,6 @@
 
 @interface LEGMainViewController : UIViewController
 
+-(instancetype)initWithFileName:(NSString *)fileName;
+
 @end

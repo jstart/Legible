@@ -8,7 +8,11 @@
 
 #import "LEGPageViewController.h"
 
-#import <KFEpubKit/KFEpubKit.h>
+#import <DTCoreText/DTAttributedTextView.h>
+
+#import "LEGEpubContentPager.h"
+#import "LEGEpubChapter.h"
+
 @import CoreText;
 
 @interface LEGPageViewController ()
@@ -24,8 +28,23 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        self.textView = [[UITextView alloc] initWithFrame:self.view.bounds textContainer:self.textContainer];
-        [self.textView setEditable:NO];
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.textView = [[DTAttributedTextView alloc] initWithFrame:self.view.bounds];
+        [self.textContainer setWidthTracksTextView:YES];
+//        [self.textView setEditable:NO];
+        [self.textView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+        [self.textView setShouldDrawImages:YES];
+        
+        self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [self.webView setPaginationBreakingMode:UIWebPaginationBreakingModePage];
+        [self.webView setPaginationMode:UIWebPaginationModeLeftToRight];
+        [self.webView setSuppressesIncrementalRendering:YES];
+        [self.webView.scrollView setPagingEnabled:YES];
+        [self.webView.scrollView setShowsVerticalScrollIndicator:NO];
+        [self.webView.scrollView setAlwaysBounceVertical:NO];
+        [self.webView.scrollView setAlwaysBounceHorizontal:YES];
+        [self.webView.scrollView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+        [self.webView setBackgroundColor:[UIColor whiteColor]];
     }
     return self;
 }
@@ -34,12 +53,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.view addSubview:self.textView];
+//    [self.view addSubview:self.textView];
+    [self.view addSubview:self.webView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,34 +67,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-+(LEGPageViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubController:(KFEpubController *) epubController{
-    LEGPageViewController * pageVC = [[LEGPageViewController alloc] init];
++(LEGPageViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size {
+    __block LEGPageViewController * pageVC = [[LEGPageViewController alloc] init];
+    pageVC.textView.alpha = 0.0;
+    pageVC.webView.alpha = 0.0;
     pageVC.pageIndex = @(pageIndex);
-    
-    NSString *contentFile = epubController.contentModel.manifest[epubController.contentModel.spine[pageIndex]][@"href"];
-    NSURL *contentURL = [epubController.epubContentBaseURL URLByAppendingPathComponent:contentFile];
-    
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithFileURL:contentURL options:nil documentAttributes:nil error:nil];
-    
-    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)(attributedString)); /*Create your framesetter based in you NSAttrinbutedString*/
-    CGFloat widthConstraint = 300; // Your width constraint, using 500 as an example
-    CFRange range;
-    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(
-                                                                        frameSetter, /* Framesetter */
-                                                                        CFRangeMake(0, attributedString.length), /* String range (entire string) */
-                                                                        NULL, /* Frame attributes */
-                                                                        CGSizeMake(widthConstraint, 568), /* Constraints (CGFLOAT_MAX indicates unconstrained) */
-                                                                        &range /* Gives the range of string that fits into the constraints, doesn't matter in your situation */
-                                                                        );
-
-    NSRange rangeFormatted = NSMakeRange(range.location, range.length);
-    NSLog(@"%lu %lu, %f %f", (unsigned long)rangeFormatted.location, (unsigned long)rangeFormatted.length, suggestedSize.width, suggestedSize.height);
-    
-    
-    [pageVC.textView setAttributedText:[attributedString attributedSubstringFromRange:rangeFormatted]];
+    __block NSURL * chapterURL = [epubContentPager chapterForPageIndex:pageIndex].spineFileURL;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(){
+        __block NSAttributedString * attributedString = [epubContentPager attributedStringForPage:[pageVC.pageIndex integerValue] withChapterURL:chapterURL withSize:size];
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            [UIView animateWithDuration:0.3 animations:^(){
+                [pageVC.textView setAttributedString:attributedString];
+                pageVC.textView.alpha = 1.0;
+                pageVC.webView.alpha = 1.0;
+                NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
+                [pageVC.webView loadRequest:request];
+            }];
+        });
+    });
     return pageVC;
 }
 
++(LEGPageViewController *)pageViewControllerAtChapterIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size {
+    __block LEGPageViewController * pageVC = [[LEGPageViewController alloc] init];
+    pageVC.webView.alpha = 0.0;
+    pageVC.pageIndex = @(chapterIndex);
+    __block NSURL * chapterURL = [epubContentPager chapterAtIndex:chapterIndex].spineFileURL;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(){
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            [UIView animateWithDuration:0.3 animations:^(){
+                pageVC.webView.alpha = 1.0;
+                NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
+                [pageVC.webView loadRequest:request];
+            }];
+        });
+    });
+    return pageVC;
+}
 /*
 #pragma mark - Navigation
 

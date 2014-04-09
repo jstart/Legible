@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+  padding: 24px 20px 8px;
+  line-height: 1.5;
+  font-size: 16px;
+  background: #f7f7f0;
+  font-family: 'ScalaPro', Georgia;
+  -webkit-font-smoothing: antialiased;
+}
+            
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+            
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  color: #4d4d4d;
+}
+            
+p {
+  margin: 3px 0 30px;
+}
+            
+a {
+  color: #58852c;
+  text-decoration: none;
+}
+        
+@media only screen and (min-width: 500px) {
+  body {
+    padding: 45px 10% 15px;
+  }
+                
+  h1 {
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0 0 10px;
+  }
+}
+        
+@media only screen and (min-width: 768px) {
+  body {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
