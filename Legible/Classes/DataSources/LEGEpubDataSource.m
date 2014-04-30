@@ -7,18 +7,19 @@
 //
 
 #import "LEGEpubDataSource.h"
+#import <KFEpubKit/KFEpubController.h>
+#import <MagicalRecord/CoreData+MagicalRecord.h>
+#import "BookOperations.h"
 
 @interface LEGEpubDataSource ()
 
-//@property (nonatomic, strong) 
+@property (nonatomic, strong) KFEpubController * epubController;
 
 @end
 
 @implementation LEGEpubDataSource
 
-static LEGEpubDataSource *SINGLETON = nil;
-
-static bool isFirstAccess = YES;
+static LEGEpubDataSource *sharedInstance = nil;
 
 #pragma mark - Public Method
 
@@ -26,51 +27,28 @@ static bool isFirstAccess = YES;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        isFirstAccess = NO;
-        SINGLETON = [[super allocWithZone:NULL]init];    
+        sharedInstance = [[super allocWithZone:NULL]init];
     });
     
-    return SINGLETON;
+    return sharedInstance;
 }
 
-#pragma mark - Life Cycle
-
-+ (id) allocWithZone:(NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-+ (id)copyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-+ (id)mutableCopyWithZone:(struct _NSZone *)zone
-{
-    return [self sharedInstance];
-}
-
-- (id)copy
-{
-    return [[LEGEpubDataSource alloc]init];
-}
-
-- (id)mutableCopy
-{
-    return [[LEGEpubDataSource alloc]init];
-}
-
-- (id) init
-{
-    if(SINGLETON){
-        return SINGLETON;
+- (void)serializeEPUBFileAtURL:(NSURL *)epubFileURL completion:(void(^)(void)) completion{
+    __block NSString * epubFileName = [[epubFileURL lastPathComponent] stringByDeletingPathExtension];
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:epubFileName];
+    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"filename == %@", epubFileName]];
+    if ([[NSManagedObjectContext MR_contextForCurrentThread] executeFetchRequest:fetchRequest error:nil].count) {
+        return;
     }
-    if (isFirstAccess) {
-        [self doesNotRecognizeSelector:_cmd];
-    }
-    self = [super init];
-    return self;
+    
+    self.epubController = [[KFEpubController alloc] initWithEpubURL:epubFileURL andDestinationFolder:destinationURL];
+    [self.epubController openWithCompletionBlock:^(KFEpubContentModel * contentModel){
+        [BookOperations saveBookFromContentModel:contentModel epubFilename:epubFileName completionBlock:^(){
+            completion();
+        }];
+    }];
 }
-
 
 @end

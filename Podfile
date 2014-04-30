@@ -4,6 +4,7 @@ platform :ios, '7.0'
 #pod 'Dropbox-Sync-API-SDK', '~> 2.1'
 pod 'KFEpubKit', :path => '../KFEpubKit'
 pod 'DTCoreText'
+pod 'MagicalRecord'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'

@@ -9,10 +9,14 @@
 #import "LEGLibraryTableViewController.h"
 
 #import "LEGMainViewController.h"
+#import "LEGEpubDataSource.h"
+#import <MagicalRecord/CoreData+MagicalRecord.h>
+#import "Book.h"
 
-@interface LEGLibraryTableViewController ()
+@interface LEGLibraryTableViewController () <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSArray * bookArray;
+@property (nonatomic, strong) NSMutableArray * bookArray;
+@property (nonatomic, strong) NSFetchedResultsController * fetchedResultsController;
 
 @end
 
@@ -30,11 +34,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"Library";
+    
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
+    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
     
-    self.bookArray = [[NSBundle mainBundle] pathsForResourcesOfType:@".epub" inDirectory:@""];
-    [self.tableView reloadData];
+    fetchRequest.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES]];
+    [fetchRequest setFetchBatchSize:20];
+        
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[NSManagedObjectContext MR_contextForCurrentThread] sectionNameKeyPath:nil cacheName:nil];
+    
+    self.fetchedResultsController.delegate = self;
+    
+    NSArray * fileArray = [[NSBundle mainBundle] pathsForResourcesOfType:@".epub" inDirectory:@""];
+    for (NSString * bookPath in fileArray) {
+        NSURL * url = [[NSURL alloc] initFileURLWithPath:bookPath];
+        [[LEGEpubDataSource sharedInstance] serializeEPUBFileAtURL:url completion:^(){
+            NSError *error;
+            if (![[self fetchedResultsController] performFetch:&error]) {
+                // Update to handle the error appropriately.
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                exit(-1);  // Fail
+            }
+            [[self tableView] reloadData];
+        }];
+    }
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        // Update to handle the error appropriately.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        exit(-1);  // Fail
+    }
+    [[self tableView] reloadData];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -51,16 +85,78 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.tableView endUpdates];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
+
+-(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath*)indexPath{
+    Book * book = self.fetchedResultsController.fetchedObjects[indexPath.row];
+    
+    cell.textLabel.text = [book title];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.bookArray.count;
+    return self.fetchedResultsController.fetchedObjects.count;
 }
 
 
@@ -69,17 +165,14 @@
     static NSString * cellIdentifier = @"CellIdentifier";
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    NSString * path = [[self.bookArray[indexPath.row] lastPathComponent] stringByDeletingPathExtension];
-    
-    cell.textLabel.text = path;
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString * path = [[self.bookArray[indexPath.row] lastPathComponent] stringByDeletingPathExtension];
-    LEGMainViewController * mainVC = [[LEGMainViewController alloc] initWithFileName:path];
+    Book * book = self.bookArray[indexPath.row];
+    LEGMainViewController * mainVC = [[LEGMainViewController alloc] initWithBook:book];
     [self.navigationController pushViewController:mainVC animated:YES];
 }
 

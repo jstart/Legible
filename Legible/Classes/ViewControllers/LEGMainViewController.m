@@ -13,6 +13,7 @@
 #import "LEGPageViewController.h"
 #import "LEGEpubContentPager.h"
 #import "LEGEpubChapter.h"
+#import "Book.h"
 
 #define LEG_PAGE_SIZE CGSizeMake(320-10, 568-10)
 
@@ -24,17 +25,17 @@
 @property (nonatomic, strong) LEGEpubContentPager * epubContentPager;
 @property (nonatomic, strong) NSMutableArray * chapterArray;
 @property (nonatomic, strong) NSNumber * currentChapterIndex;
-@property (nonatomic, strong) NSString * epubFileName;
+@property (nonatomic, strong) Book * book;
 
 @end
 
 @implementation LEGMainViewController
 
--(instancetype)initWithFileName:(NSString *)fileName;
+-(instancetype)initWithBook:(Book *)book
 {
     self = [super init];
     if (self) {
-        self.epubFileName = fileName;
+        self.book = book;
     }
     return self;
 }
@@ -48,12 +49,11 @@
     self.chapterArray = [NSMutableArray array];
     self.currentChapterIndex = @(0);
     
-    NSURL *epubURL = [[NSBundle mainBundle] URLForResource:self.epubFileName withExtension:@"epub"];
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    self.epubController = [[KFEpubController alloc] initWithEpubURL:epubURL andDestinationFolder:documentsURL];
-    self.epubController.delegate = self;
-    [self.epubController openAsynchronous:YES];
-    
+    NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:self.book.filename];
+    self.epubController = [[KFEpubController alloc] initWithEPUBContentBaseURL:destinationURL];
+    [self.epubController openFromUnzippedBaseURL];;
+
     self.epubContentPager = [[LEGEpubContentPager alloc] initWithEpubController:self.epubController];
     
     self.pageVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -66,8 +66,8 @@
     [self.view addSubview:self.pageVC.view];
     [self.pageVC didMoveToParentViewController:self];
     
-    UITapGestureRecognizer * tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
-    [self.pageVC.view addGestureRecognizer:tapGestureRec];
+    UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.pageVC.view addGestureRecognizer:tapGestureRecognizer];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -94,6 +94,9 @@
         return (LEGPageViewController *)[self.viewControllers objectAtIndex:index];
     }else{
         pageVC = [LEGPageViewController pageViewControllerAtChapterIndex:index epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
+        UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+        tapGestureRecognizer.delegate = pageVC;
+        [pageVC.webView addGestureRecognizer:tapGestureRecognizer];
         [self.viewControllers insertObject:pageVC atIndex:index];
     }
     return pageVC;
@@ -104,9 +107,13 @@
 
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
+    [self removeAllCSSFilesAtPath:controller.epubContentBaseURL];
     [self.epubContentPager processWithSize:LEG_PAGE_SIZE andProgressBlock:^(LEGEpubChapter * chapter){
         if ([chapter.chapterIndex integerValue] == 0) {
             LEGPageViewController * pageVC = [LEGPageViewController pageViewControllerAtChapterIndex:0 epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
+            UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+            tapGestureRecognizer.delegate = pageVC;
+            [pageVC.webView addGestureRecognizer:tapGestureRecognizer];
             [self.pageVC setViewControllers:@[pageVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
             [self.viewControllers addObject:pageVC];
         }
@@ -116,6 +123,40 @@
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error{
     
+}
+
+-(void) removeAllCSSFilesAtPath:(NSURL *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtURL:path
+                                          includingPropertiesForKeys:@[NSURLNameKey, NSURLIsDirectoryKey]
+                                                             options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                        errorHandler:^BOOL(NSURL *url, NSError *error){
+                                                                NSLog(@"[Error] %@ (%@)", error, url);
+                                                            return YES;
+                                        }];
+    
+    NSMutableArray *mutableFileURLs = [NSMutableArray array];
+    for (NSURL *fileURL in enumerator) {
+        NSString *filename;
+        [fileURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
+        
+        NSNumber *isDirectory;
+        [fileURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:nil];
+        
+        // Skip directories with '_' prefix, for example
+        if ([filename hasPrefix:@"_"] && [isDirectory boolValue]) {
+            [enumerator skipDescendants];
+            continue;
+        }
+        
+        if (![isDirectory boolValue]) {
+            [mutableFileURLs addObject:fileURL];
+        }
+        if ([filename hasSuffix:@".css"]) {
+            [fileManager removeItemAtURL:fileURL error:nil];
+        }
+    }
 }
 
 #pragma mark -

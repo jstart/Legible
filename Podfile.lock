@@ -13,6 +13,9 @@ PODS:
     - KissXML
     - SSZipArchive
   - KissXML (5.0)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.2)
   - OCMock (2.2.3)
   - Specta (0.2.1)
   - SSZipArchive (0.3.1)
@@ -21,6 +24,7 @@ DEPENDENCIES:
   - DTCoreText
   - Expecta
   - KFEpubKit (from `../KFEpubKit`)
+  - MagicalRecord
   - OCMock
   - Specta
 
@@ -32,10 +36,11 @@ SPEC CHECKSUMS:
   DTCoreText: 4d56bb74ff05a3b2415fc15fccc4b5689ed3119c
   DTFoundation: 7c69990fa3cb7655cafa95ab59c3fcea014460f0
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
-  KFEpubKit: 266edc8eae65740e628c6d9a55c355f148ccd8e1
+  KFEpubKit: 67d277b063b0d6738f8b4b7e11ab5d1f1e18de20
   KissXML: 4c66b6f39ef49c23e6bb8d335b94136f12b1b615
-  OCMock: 74e4ddbcef134170dcc844f91c691f13868075d7
+  MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
+  OCMock: ea7fe30ee99e4e3186ad47d032a301fa7e8793ec
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
-  SSZipArchive: 47d0589a15452311749a4eeecb97e12800d127de
+  SSZipArchive: 5479ec96c412904a987a3ae3180d65234aa46b6e
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Book;
+
 @interface LEGMainViewController : UIViewController
 
--(instancetype)initWithFileName:(NSString *)fileName;
+-(instancetype)initWithBook:(Book *)book;
 
 @end

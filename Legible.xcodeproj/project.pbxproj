@@ -17,7 +17,6 @@
 		AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */; };
 		AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */; };
 		AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */; };
-		AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */; };
 		AD1D42B318EE399300EADCA6 /* LEGEpubContentPager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */; };
 		AD1D42B518EF309100EADCA6 /* tolstoy-war-and-peace.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */; };
 		AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */; };
@@ -39,6 +38,10 @@
 		AD1D42DE18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */; };
 		AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */; };
 		AD1D42E018F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */; };
+		AD5BCA41190EFFB800CA1A36 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA3F190EFFB800CA1A36 /* Model.xcdatamodeld */; };
+		AD5BCA47190F009E00CA1A36 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA46190F009E00CA1A36 /* Book.m */; };
+		AD5BCA4A190F01B900CA1A36 /* BookOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA49190F01B900CA1A36 /* BookOperations.m */; };
+		ADD8984E18FC9A330080D411 /* userStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ADD8984D18FC9A330080D411 /* userStyle.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,12 @@
 		AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sun Tzu - The Art of War.epub"; sourceTree = "<group>"; };
 		AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub"; sourceTree = "<group>"; };
 		AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub"; sourceTree = "<group>"; };
+		AD5BCA40190EFFB800CA1A36 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AD5BCA45190F009E00CA1A36 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		AD5BCA46190F009E00CA1A36 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		AD5BCA48190F01B900CA1A36 /* BookOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOperations.h; sourceTree = "<group>"; };
+		AD5BCA49190F01B900CA1A36 /* BookOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOperations.m; sourceTree = "<group>"; };
+		ADD8984D18FC9A330080D411 /* userStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = userStyle.css; sourceTree = "<group>"; };
 		C8E71C55987E49AA943A95C5 /* Legible-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Legible-Prefix.pch"; sourceTree = "<group>"; };
 		D40459F5761C4367A14ED92C /* LEGAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEGAppDelegate.h; sourceTree = "<group>"; };
 		D7BC8CE945154D1F81A18BCF /* Legible-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Legible-Info.plist"; sourceTree = "<group>"; };
@@ -201,6 +210,7 @@
 		41745037089642B7B8A946ED /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				AD5BCA3E190EFFA800CA1A36 /* Core Data */,
 				AD1D42B118EE399300EADCA6 /* LEGEpubContentPager.h */,
 				AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */,
 				AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */,
@@ -283,6 +293,7 @@
 		9DE32C13D0914FFFAEB49A67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8984D18FC9A330080D411 /* userStyle.css */,
 				AD1D42A718EE114500EADCA6 /* Core Data */,
 				AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
 				AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */,
@@ -317,6 +328,18 @@
 				AD1D42A818EE116400EADCA6 /* Model.xcdatamodeld */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		AD5BCA3E190EFFA800CA1A36 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AD5BCA45190F009E00CA1A36 /* Book.h */,
+				AD5BCA46190F009E00CA1A36 /* Book.m */,
+				AD5BCA3F190EFFB800CA1A36 /* Model.xcdatamodeld */,
+				AD5BCA48190F01B900CA1A36 /* BookOperations.h */,
+				AD5BCA49190F01B900CA1A36 /* BookOperations.m */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		CB8FA19D5E0849798909FD4F /* ViewControllers */ = {
@@ -435,6 +458,7 @@
 				AD1D42D918F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub in Resources */,
 				AD1D42D518F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */,
 				AD1D42D218F35AC200EADCA6 /* Daniel H. Pink - Drive.epub in Resources */,
+				ADD8984E18FC9A330080D411 /* userStyle.css in Resources */,
 				AD1D42DC18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub in Resources */,
 				AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */,
 				AD1D42D018F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */,
@@ -547,9 +571,11 @@
 				AD1D42BE18EF6F2500EADCA6 /* LEGLibraryTableViewController.m in Sources */,
 				99A671595652453691C40955 /* LEGAppDelegate.m in Sources */,
 				AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */,
+				AD5BCA47190F009E00CA1A36 /* Book.m in Sources */,
 				AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */,
+				AD5BCA4A190F01B900CA1A36 /* BookOperations.m in Sources */,
 				5725CA73579B4337897A4BCF /* main.m in Sources */,
-				AD1D42AA18EE116400EADCA6 /* Model.xcdatamodeld in Sources */,
+				AD5BCA41190EFFB800CA1A36 /* Model.xcdatamodeld in Sources */,
 				AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */,
 				AD1D42B318EE399300EADCA6 /* LEGEpubContentPager.m in Sources */,
 			);
@@ -607,6 +633,25 @@
 				INFOPLIST_FILE = "Legible/Resources/Other-Sources/Legible-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+					"-lz",
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreText,
+					"-framework",
+					Foundation,
+					"-framework",
+					ImageIO,
+					"-framework",
+					MediaPlayer,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -636,6 +681,25 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+					"-lz",
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreText,
+					"-framework",
+					Foundation,
+					"-framework",
+					ImageIO,
+					"-framework",
+					MediaPlayer,
+					"-framework",
+					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -800,6 +864,16 @@
 			currentVersion = AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */;
 			name = Model.xcdatamodeld;
 			path = "Core Data/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		AD5BCA3F190EFFB800CA1A36 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD5BCA40190EFFB800CA1A36 /* Model.xcdatamodel */,
+			);
+			currentVersion = AD5BCA40190EFFB800CA1A36 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 truman. All rights reserved.
 //
 
+@class Book;
+
 @interface LEGEpubDataSource : NSObject
 
 /**
@@ -13,5 +15,7 @@
  * @return singleton
  */
 + (LEGEpubDataSource*)sharedInstance;
+
+- (void)serializeEPUBFileAtURL:(NSURL *)epubFileURL completion:(void(^)(void)) completion;
 
 @end

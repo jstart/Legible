@@ -10,7 +10,7 @@
 
 @class LEGEpubContentPager, LEGEpubChapter, DTAttributedTextView;
 
-@interface LEGPageViewController : UIViewController
+@interface LEGPageViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) DTAttributedTextView * textView;
 @property (nonatomic, strong) UIWebView * webView;

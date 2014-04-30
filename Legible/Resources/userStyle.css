@@ -1,44 +1,14 @@
-
-@font-face { font-family: -ua-default; font-style: normal; font-weight: normal; src: url("res:///ScalaPro.otf") }
-@font-face { font-family: -ua-default; font-style: italic, oblique; font-weight: normal; src: url("res:///ScalaPro-Ita.otf") }
-@font-face { font-family: -ua-default; font-style: normal; font-weight: bold; src: url("res:///ScalaPro-Bold.otf") }
-@font-face { font-family: -ua-default; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///Scala-Italic.otf") }
-
-@font-face { font-family: "ScalaPro"; font-style: normal; font-weight: normal; src: url("res:///ScalaPro.otf") }
-@font-face { font-family: "ScalaPro"; font-style: italic, oblique; font-weight: normal; src: url("res:///ScalaPro-Ita.otf") }
-@font-face { font-family: "ScalaPro"; font-style: normal; font-weight: bold; src: url("res:///ScalaPro-Bold.otf") }
-@font-face { font-family: "ScalaPro"; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///ScalaPro-Ita.otf") }
-
-@font-face { font-family: "MinionPro"; font-style: normal; font-weight: normal; src: url("res:///MinionPro-Regular.otf") }
-@font-face { font-family: "MinionPro"; font-style: italic, oblique; font-weight: normal; src: url("res:///MinionPro-It.otf") }
-@font-face { font-family: "MinionPro"; font-style: normal; font-weight: bold; src: url("res:///MinionPro-Bold.otf") }
-@font-face { font-family: "MinionPro"; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///MinionPro-BoldIt.otf") }
-
-@font-face { font-family: "TimesNewRoman"; font-style: normal; font-weight: normal; src: url("res:///TimesNewRoman-Regular.ttf") }
-@font-face { font-family: "TimesNewRoman"; font-style: italic, oblique; font-weight: normal; src: url("res:///TimesNewRoman-It.ttf") }
-@font-face { font-family: "TimesNewRoman"; font-style: normal; font-weight: bold; src: url("res:///TimesNewRoman-Bold.ttf") }
-@font-face { font-family: "TimesNewRoman"; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///TimesNewRoman-BoltIt.ttf") }
-
-@font-face { font-family: sans-serif; font-style: normal; font-weight: normal; src: url("res:///ScalaSansPro.otf") }
-@font-face { font-family: sans-serif; font-style: italic, oblique; font-weight: normal; src: url("res:///ScalaSansPro.otf") }
-@font-face { font-family: sans-serif; font-style: normal; font-weight: bold; src: url("res:///ScalaSansPro.otf") }
-@font-face { font-family: sans-serif; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///ScalaSansPro.otf") }
-
-@font-face { font-family: monospace; font-style: normal; font-weight: normal; src: url("res:///Inconsolata.otf") }
-@font-face { font-family: monospace; font-style: italic, oblique; font-weight: normal; src: url("res:///Inconsolata.otf") }
-@font-face { font-family: monospace; font-style: normal; font-weight: bold; src: url("res:///InconsolataXLBold.otf") }
-@font-face { font-family: monospace; font-style: italic, oblique; font-weight: bold, normal; src: url("res:///InconsolataXLBold.otf") }
-
-
 body, html {
     font-family: "ScalaPro", "MinionPro", "TimesNewRoman", serif;
+    font-size:large;
+    font-color:black;
     margin: 0;
-    padding: 0;
+    padding: 5;
 }
 
 img, svg {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 p {

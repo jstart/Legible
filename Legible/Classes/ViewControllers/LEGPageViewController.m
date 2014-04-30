@@ -15,7 +15,7 @@
 
 @import CoreText;
 
-@interface LEGPageViewController ()
+@interface LEGPageViewController () <UIScrollViewDelegate, UIWebViewDelegate>
 
 @property (nonatomic, strong) NSTextContainer * textContainer;
 
@@ -36,6 +36,7 @@
         [self.textView setShouldDrawImages:YES];
         
         self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [self.webView setDelegate:self];
         [self.webView setPaginationBreakingMode:UIWebPaginationBreakingModePage];
         [self.webView setPaginationMode:UIWebPaginationModeLeftToRight];
         [self.webView setSuppressesIncrementalRendering:YES];
@@ -44,7 +45,10 @@
         [self.webView.scrollView setAlwaysBounceVertical:NO];
         [self.webView.scrollView setAlwaysBounceHorizontal:YES];
         [self.webView.scrollView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+        [self.webView.scrollView setContentSize:CGSizeMake(self.view.bounds.size.width-20, self.view.bounds.size.height)];
         [self.webView setBackgroundColor:[UIColor whiteColor]];
+        
+        [self.webView.scrollView setDelegate:self];
     }
     return self;
 }
@@ -69,7 +73,7 @@
 
 +(LEGPageViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size {
     __block LEGPageViewController * pageVC = [[LEGPageViewController alloc] init];
-    pageVC.textView.alpha = 0.0;
+//    pageVC.textView.alpha = 0.0;
     pageVC.webView.alpha = 0.0;
     pageVC.pageIndex = @(pageIndex);
     __block NSURL * chapterURL = [epubContentPager chapterForPageIndex:pageIndex].spineFileURL;
@@ -78,7 +82,6 @@
         dispatch_async(dispatch_get_main_queue(), ^(){
             [UIView animateWithDuration:0.3 animations:^(){
                 [pageVC.textView setAttributedString:attributedString];
-                pageVC.textView.alpha = 1.0;
                 pageVC.webView.alpha = 1.0;
                 NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
                 [pageVC.webView loadRequest:request];
@@ -97,12 +100,39 @@
         dispatch_async(dispatch_get_main_queue(), ^(){
             [UIView animateWithDuration:0.3 animations:^(){
                 pageVC.webView.alpha = 1.0;
-                NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
-                [pageVC.webView loadRequest:request];
+                NSString * htmlString = [[NSString alloc] initWithContentsOfURL:chapterURL encoding:NSUTF8StringEncoding error:nil];
+                [pageVC.webView loadHTMLString:htmlString baseURL:[chapterURL URLByDeletingLastPathComponent]];
             }];
         });
     });
     return pageVC;
+}
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGFloat pageNum = (int)(scrollView.contentOffset.x / scrollView.frame.size.width);
+
+    NSLog(@"scrollViewDidEndDecelerating %ld", (long)pageNum);
+}
+
+#pragma mark -
+#pragma mark UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+#pragma mark -
+#pragma mark UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSString *cssPath = [path stringByAppendingPathComponent:@"userStyle.css"];
+    
+    NSString *js = @"document.getElementsByTagName('link')[0].setAttribute('href','";
+    NSString *js2 = [js stringByAppendingString:cssPath];
+    NSString *finalJS = [js2 stringByAppendingString:@"');"];
+    [webView stringByEvaluatingJavaScriptFromString:finalJS];
 }
 /*
 #pragma mark - Navigation
