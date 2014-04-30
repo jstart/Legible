@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * filename;
+@property (nonatomic, retain) NSString * epubContentBaseURL;
 @property (nonatomic, retain) NSString * author;
 @property (nonatomic, retain) NSDate * dateAdded;
 @property (nonatomic, retain) NSString * identifier;

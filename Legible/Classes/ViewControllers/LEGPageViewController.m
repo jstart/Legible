@@ -100,8 +100,9 @@
         dispatch_async(dispatch_get_main_queue(), ^(){
             [UIView animateWithDuration:0.3 animations:^(){
                 pageVC.webView.alpha = 1.0;
-                NSString * htmlString = [[NSString alloc] initWithContentsOfURL:chapterURL encoding:NSUTF8StringEncoding error:nil];
-                [pageVC.webView loadHTMLString:htmlString baseURL:[chapterURL URLByDeletingLastPathComponent]];
+
+                NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
+                [pageVC.webView loadRequest:request];
             }];
         });
     });
@@ -126,13 +127,6 @@
 #pragma mark -
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSString *cssPath = [path stringByAppendingPathComponent:@"userStyle.css"];
-    
-    NSString *js = @"document.getElementsByTagName('link')[0].setAttribute('href','";
-    NSString *js2 = [js stringByAppendingString:cssPath];
-    NSString *finalJS = [js2 stringByAppendingString:@"');"];
-    [webView stringByEvaluatingJavaScriptFromString:finalJS];
 }
 /*
 #pragma mark - Navigation

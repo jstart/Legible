@@ -10,6 +10,7 @@
 
 #import "LEGLibraryTableViewController.h"
 #import <MagicalRecord/CoreData+MagicalRecord.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation LEGAppDelegate
 
@@ -23,7 +24,7 @@
     
     [self.window makeKeyAndVisible];
     
-    
+    [Crashlytics startWithAPIKey:@"ff6f76d45da103570f8070443d1760ea5199fc81"];
     return YES;
 }
 

@@ -62,16 +62,15 @@
     UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     [self.pageVC.view addGestureRecognizer:tapGestureRecognizer];
     
-    
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:self.book.filename];
     
-    self.epubController = [[KFEpubController alloc] initWithEPUBContentBaseURL:destinationURL];
+
+    self.epubController = [[KFEpubController alloc] initWithEPUBContentBaseURL:[NSURL URLWithString:self.book.epubContentBaseURL] andEpubURL:destinationURL];
     self.epubContentPager = [[LEGEpubContentPager alloc] initWithEpubController:self.epubController];
     
     [self.epubController setDelegate:self];
     [self.epubController openFromUnzippedBaseURL];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -111,7 +110,6 @@
 
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
-    [self removeAllCSSFilesAtPath:controller.epubContentBaseURL];
     [self.epubContentPager processWithSize:LEG_PAGE_SIZE andProgressBlock:^(LEGEpubChapter * chapter){
         if ([chapter.chapterIndex integerValue] == 0) {
             LEGPageViewController * pageVC = [LEGPageViewController pageViewControllerAtChapterIndex:0 epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
@@ -127,40 +125,6 @@
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error{
     
-}
-
--(void) removeAllCSSFilesAtPath:(NSURL *)path
-{
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtURL:path
-                                          includingPropertiesForKeys:@[NSURLNameKey, NSURLIsDirectoryKey]
-                                                             options:NSDirectoryEnumerationSkipsHiddenFiles
-                                                        errorHandler:^BOOL(NSURL *url, NSError *error){
-                                                                NSLog(@"[Error] %@ (%@)", error, url);
-                                                            return YES;
-                                        }];
-    
-    NSMutableArray *mutableFileURLs = [NSMutableArray array];
-    for (NSURL *fileURL in enumerator) {
-        NSString *filename;
-        [fileURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
-        
-        NSNumber *isDirectory;
-        [fileURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:nil];
-        
-        // Skip directories with '_' prefix, for example
-        if ([filename hasPrefix:@"_"] && [isDirectory boolValue]) {
-            [enumerator skipDescendants];
-            continue;
-        }
-        
-        if (![isDirectory boolValue]) {
-            [mutableFileURLs addObject:fileURL];
-        }
-        if ([filename hasSuffix:@".css"]) {
-            [fileManager removeItemAtURL:fileURL error:nil];
-        }
-    }
 }
 
 #pragma mark -

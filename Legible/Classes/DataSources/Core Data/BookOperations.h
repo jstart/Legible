@@ -12,6 +12,6 @@
 
 +(void)saveAllBooks:(NSArray *) books withCompletionBlock:(void(^)(void)) completion;
 
-+(void)saveBookFromContentModel:(KFEpubContentModel*) contentModel epubFilename:(NSString *)epubFilename  completionBlock:(void(^)(void)) completion;
++(void)saveBookFromContentModel:(KFEpubContentModel*) contentModel epubFileName:(NSString *)epubFileName epubContentBaseURL:(NSString *)epubContentBaseURL completionBlock:(void(^)(void)) completion;
 
 @end

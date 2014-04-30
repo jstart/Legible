@@ -13,6 +13,7 @@
 
 @dynamic title;
 @dynamic filename;
+@dynamic epubContentBaseURL;
 @dynamic author;
 @dynamic dateAdded;
 @dynamic identifier;

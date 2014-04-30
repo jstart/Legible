@@ -13,6 +13,23 @@
 		699BFC95CE6D475784108ED3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F0C3F3EEBB43658AED1638 /* Images.xcassets */; };
 		7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6775EBE9344211AE4DA59A /* libPods.a */; };
 		99A671595652453691C40955 /* LEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8006846039646548E17CD37 /* LEGAppDelegate.m */; };
+		AD11CDDD1910AD61002E9E0A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */; };
+		AD11CDF01910B393002E9E0A /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE01910B393002E9E0A /* AppIcon29x29.png */; };
+		AD11CDF11910B393002E9E0A /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */; };
+		AD11CDF21910B393002E9E0A /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE21910B393002E9E0A /* AppIcon40x40.png */; };
+		AD11CDF31910B393002E9E0A /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */; };
+		AD11CDF41910B393002E9E0A /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE41910B393002E9E0A /* AppIcon50x50.png */; };
+		AD11CDF51910B393002E9E0A /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */; };
+		AD11CDF61910B393002E9E0A /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE61910B393002E9E0A /* AppIcon57x57.png */; };
+		AD11CDF71910B393002E9E0A /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */; };
+		AD11CDF81910B393002E9E0A /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE81910B393002E9E0A /* AppIcon60x60.png */; };
+		AD11CDF91910B393002E9E0A /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */; };
+		AD11CDFA1910B393002E9E0A /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */; };
+		AD11CDFB1910B393002E9E0A /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */; };
+		AD11CDFC1910B393002E9E0A /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */; };
+		AD11CDFD1910B393002E9E0A /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */; };
+		AD11CDFE1910B393002E9E0A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */; };
+		AD11CDFF1910B393002E9E0A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */; };
 		AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */; };
 		AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */; };
 		AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */; };
@@ -64,6 +81,23 @@
 		9F6775EBE9344211AE4DA59A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2735D05CA504DA2889505EE /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		A8006846039646548E17CD37 /* LEGAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEGAppDelegate.m; sourceTree = "<group>"; };
+		AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		AD11CDE01910B393002E9E0A /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		AD11CDE21910B393002E9E0A /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		AD11CDE41910B393002E9E0A /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		AD11CDE61910B393002E9E0A /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		AD11CDE81910B393002E9E0A /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub"; sourceTree = "<group>"; };
 		AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGMainViewController.h; sourceTree = "<group>"; };
 		AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGMainViewController.m; sourceTree = "<group>"; };
@@ -124,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277083C4A62D4D6BA7E8A79B /* Foundation.framework in Frameworks */,
+				AD11CDDD1910AD61002E9E0A /* Crashlytics.framework in Frameworks */,
 				7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +197,7 @@
 		15C872F4671D4B5E8DEC7F3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */,
 				12AFD429368A4989A66AD193 /* iOS */,
 				08068DFBAE2242BD94396D8A /* libPods-unit_tests.a */,
 				9F6775EBE9344211AE4DA59A /* libPods.a */,
@@ -240,6 +276,7 @@
 		5BC92E55533D4541A23D3A3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD11CDDE1910B393002E9E0A /* App Icons */,
 				A2735D05CA504DA2889505EE /* UnitTests-Info.plist */,
 				922C3ECDC7E644D39B2AA0CD /* UnitTests-Prefix.pch */,
 			);
@@ -322,6 +359,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AD11CDDE1910B393002E9E0A /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AD11CDDF1910B393002E9E0A /* App Icon [Squared] */,
+			);
+			name = "App Icons";
+			path = "Resources/App Icons";
+			sourceTree = SOURCE_ROOT;
+		};
+		AD11CDDF1910B393002E9E0A /* App Icon [Squared] */ = {
+			isa = PBXGroup;
+			children = (
+				AD11CDE01910B393002E9E0A /* AppIcon29x29.png */,
+				AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */,
+				AD11CDE21910B393002E9E0A /* AppIcon40x40.png */,
+				AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */,
+				AD11CDE41910B393002E9E0A /* AppIcon50x50.png */,
+				AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */,
+				AD11CDE61910B393002E9E0A /* AppIcon57x57.png */,
+				AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */,
+				AD11CDE81910B393002E9E0A /* AppIcon60x60.png */,
+				AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */,
+				AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */,
+				AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */,
+				AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */,
+				AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */,
+				AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */,
+				AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */,
+			);
+			path = "App Icon [Squared]";
+			sourceTree = "<group>";
+		};
 		AD1D42A718EE114500EADCA6 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +451,7 @@
 				E5B1D839498B46C28B1906E0 /* Resources */,
 				1E4D6D5C349B425ABA400B34 /* Warn for TODO and FIXME comments */,
 				D6CC4A3C0E1E46EC8E926ECC /* Copy Pods Resources */,
+				AD11CDDB1910AD37002E9E0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -450,6 +520,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD11CDF91910B393002E9E0A /* AppIcon60x60@2x.png in Resources */,
+				AD11CDFA1910B393002E9E0A /* AppIcon72x72.png in Resources */,
+				AD11CDF41910B393002E9E0A /* AppIcon50x50.png in Resources */,
+				AD11CDFF1910B393002E9E0A /* iTunesArtwork@2x.png in Resources */,
+				AD11CDFE1910B393002E9E0A /* iTunesArtwork.png in Resources */,
+				AD11CDFC1910B393002E9E0A /* AppIcon76x76.png in Resources */,
+				AD11CDF11910B393002E9E0A /* AppIcon29x29@2x.png in Resources */,
+				AD11CDF71910B393002E9E0A /* AppIcon57x57@2x.png in Resources */,
+				AD11CDF51910B393002E9E0A /* AppIcon50x50@2x.png in Resources */,
+				AD11CDF81910B393002E9E0A /* AppIcon60x60.png in Resources */,
+				AD11CDF61910B393002E9E0A /* AppIcon57x57.png in Resources */,
+				AD11CDFB1910B393002E9E0A /* AppIcon72x72@2x.png in Resources */,
+				AD11CDF21910B393002E9E0A /* AppIcon40x40.png in Resources */,
+				AD11CDF31910B393002E9E0A /* AppIcon40x40@2x.png in Resources */,
+				AD11CDFD1910B393002E9E0A /* AppIcon76x76@2x.png in Resources */,
+				AD11CDF01910B393002E9E0A /* AppIcon29x29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +583,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		AD11CDDB1910AD37002E9E0A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run ff6f76d45da103570f8070443d1760ea5199fc81 100c77c584dbb2ebc0a3526af42df0622d7db0252d308e530c9c6764674a5d36";
 		};
 		BB72E55DB1A5498ABD5EF5D1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -622,10 +721,15 @@
 			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -672,10 +776,15 @@
 			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Legible/Resources/Other-Sources/Legible-Prefix.pch";

@@ -26,13 +26,14 @@
     }];
 }
 
-+(void)saveBookFromContentModel:(KFEpubContentModel*) contentModel epubFilename:(NSString *)epubFilename completionBlock:(void(^)(void)) completion{
++(void)saveBookFromContentModel:(KFEpubContentModel*) contentModel epubFileName:(NSString *)epubFileName epubContentBaseURL:(NSString *)epubContentBaseURL completionBlock:(void(^)(void)) completion{
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext * localContext){
         Book * book = [Book MR_createInContext:localContext];
         book.title = [contentModel metaData][@"title"];
         book.author = [contentModel metaData][@"creator"];
         book.dateAdded = [NSDate date];
-        book.filename = epubFilename;
+        book.filename = epubFileName;
+        book.epubContentBaseURL = epubContentBaseURL;
         [localContext MR_saveToPersistentStoreAndWait];
     }completion:^(BOOL success, NSError * error){
         completion();
