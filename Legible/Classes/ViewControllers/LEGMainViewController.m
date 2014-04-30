@@ -49,13 +49,6 @@
     self.chapterArray = [NSMutableArray array];
     self.currentChapterIndex = @(0);
     
-    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:self.book.filename];
-    self.epubController = [[KFEpubController alloc] initWithEPUBContentBaseURL:destinationURL];
-    [self.epubController openFromUnzippedBaseURL];;
-
-    self.epubContentPager = [[LEGEpubContentPager alloc] initWithEpubController:self.epubController];
-    
     self.pageVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.pageVC.view setFrame:self.view.bounds];
     [self.pageVC.view setBackgroundColor:[UIColor blackColor]];
@@ -68,6 +61,17 @@
     
     UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     [self.pageVC.view addGestureRecognizer:tapGestureRecognizer];
+    
+    
+    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:self.book.filename];
+    
+    self.epubController = [[KFEpubController alloc] initWithEPUBContentBaseURL:destinationURL];
+    self.epubContentPager = [[LEGEpubContentPager alloc] initWithEpubController:self.epubController];
+    
+    [self.epubController setDelegate:self];
+    [self.epubController openFromUnzippedBaseURL];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -171,7 +171,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Book * book = self.bookArray[indexPath.row];
+    Book * book = self.fetchedResultsController.fetchedObjects[indexPath.row];
     LEGMainViewController * mainVC = [[LEGMainViewController alloc] initWithBook:book];
     [self.navigationController pushViewController:mainVC animated:YES];
 }

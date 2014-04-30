@@ -421,6 +421,11 @@
 				CLASSPREFIX = LEG;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = truman;
+				TargetAttributes = {
+					1770A4B9905042A49EA72EE8 = {
+						DevelopmentTeam = PP6S682Z9F;
+					};
+				};
 			};
 			buildConfigurationList = 9A35B4AB6A6940A8A9796E5F /* Build configuration list for PBXProject "Legible" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -617,6 +622,8 @@
 			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -653,9 +660,10 @@
 					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB7D1BBD-3FF5-4414-99D2-EB85CBF2C28E";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -664,6 +672,8 @@
 			baseConfigurationReference = 5B0EFE81ACC94D94BC501F3F /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -702,9 +712,10 @@
 					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB7D1BBD-3FF5-4414-99D2-EB85CBF2C28E";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
