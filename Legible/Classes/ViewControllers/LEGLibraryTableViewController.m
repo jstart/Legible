@@ -36,6 +36,7 @@
     [super viewDidLoad];
     
     self.title = @"Library";
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:21]}];
     
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];

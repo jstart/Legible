@@ -17,6 +17,12 @@ PODS:
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
   - OCMock (2.2.3)
+  - ReactiveCocoa (2.3):
+    - ReactiveCocoa/Core
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/Core (2.3):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3)
   - Specta (0.2.1)
   - SSZipArchive (0.3.1)
 
@@ -26,6 +32,7 @@ DEPENDENCIES:
   - KFEpubKit (from `../KFEpubKit`)
   - MagicalRecord
   - OCMock
+  - ReactiveCocoa
   - Specta
 
 EXTERNAL SOURCES:
@@ -40,6 +47,7 @@ SPEC CHECKSUMS:
   KissXML: 4c66b6f39ef49c23e6bb8d335b94136f12b1b615
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   OCMock: ea7fe30ee99e4e3186ad47d032a301fa7e8793ec
+  ReactiveCocoa: 1f6265f9d521923d3efcc37b00722cefc16df269
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
   SSZipArchive: 5479ec96c412904a987a3ae3180d65234aa46b6e
 

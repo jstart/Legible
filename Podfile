@@ -5,6 +5,7 @@ platform :ios, '7.0'
 pod 'KFEpubKit', :path => '../KFEpubKit'
 pod 'DTCoreText'
 pod 'MagicalRecord'
+pod 'ReactiveCocoa'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'

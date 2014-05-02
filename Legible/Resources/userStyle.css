@@ -2,13 +2,12 @@ body, html {
     font-family: "ScalaPro", "MinionPro", "TimesNewRoman", serif;
     font-size:large;
     font-color:black;
-    margin: 0;
     padding: 5;
 }
 
 img, svg {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 p {

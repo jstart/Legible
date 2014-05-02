@@ -84,7 +84,6 @@ static LEGEpubDataSource *sharedInstance = nil;
             [mutableFileURLs addObject:fileURL];
         }
         if ([filename hasSuffix:@".css"]) {
-            NSURL * url = nil;
             NSError * error = nil;
             [fileManager removeItemAtURL:fileURL error:&error];
             if (error) {
@@ -94,7 +93,6 @@ static LEGEpubDataSource *sharedInstance = nil;
             if (error) {
                 NSLog(@"%@", error);
             }
-            NSLog(@"%@", url);
         }
     }
 }

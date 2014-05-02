@@ -56,40 +56,40 @@
 
 - (void)processWithSize:(CGSize)size andProgressBlock:(void (^)(LEGEpubChapter * chapter))progressBlock{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(){
-        NSInteger totalPageNumber = 0;
+//        NSInteger totalPageNumber = 0;
         NSInteger chapterIndex = 0;
         for (NSString * spineKey in self.epubController.contentModel.spine) {
             @autoreleasepool {
                 if ([spineKey isEqualToString:@"ncx"]) {
                     continue;
                 }
-                NSMutableArray * pageRangeArray = [NSMutableArray array];
+//                NSMutableArray * pageRangeArray = [NSMutableArray array];
                 LEGEpubChapter * chapter = [LEGEpubChapter new];
                 
                 NSString *contentFile = self.epubController.contentModel.manifest[spineKey][@"href"];
                 NSURL *contentURL = [self.epubController.epubContentBaseURL URLByAppendingPathComponent:contentFile];
                 chapter.spineFileURL = contentURL;
                 
-                chapter.startPageIndex = @(totalPageNumber);
-                
-                NSAttributedString *attributedString = [self attributedStringAtURL:contentURL];
-
-                NSInteger chapterPageNumber = 0;
-                NSInteger currentChapterCharacterIndex = 0;
-                while (attributedString.length) {
-                    NSRange range = [self rangeForAttributedString:attributedString withSize:size];
-                    NSRange rangeToStore = NSMakeRange(currentChapterCharacterIndex, range.length);
-                    [pageRangeArray addObject:[NSValue valueWithRange:rangeToStore]];
-                    currentChapterCharacterIndex += range.length;
-                    
-                    NSRange remainingRange = NSMakeRange(range.location+range.length, attributedString.length - (range.location+range.length));
-                    attributedString = [attributedString attributedSubstringFromRange:remainingRange];
-                    chapterPageNumber++;
-                    totalPageNumber++;
-                }
+//                chapter.startPageIndex = @(totalPageNumber);
+//                
+//                NSAttributedString *attributedString = [self attributedStringAtURL:contentURL];
+//
+//                NSInteger chapterPageNumber = 0;
+//                NSInteger currentChapterCharacterIndex = 0;
+//                while (attributedString.length) {
+//                    NSRange range = [self rangeForAttributedString:attributedString withSize:size];
+//                    NSRange rangeToStore = NSMakeRange(currentChapterCharacterIndex, range.length);
+//                    [pageRangeArray addObject:[NSValue valueWithRange:rangeToStore]];
+//                    currentChapterCharacterIndex += range.length;
+//                    
+//                    NSRange remainingRange = NSMakeRange(range.location+range.length, attributedString.length - (range.location+range.length));
+//                    attributedString = [attributedString attributedSubstringFromRange:remainingRange];
+//                    chapterPageNumber++;
+//                    totalPageNumber++;
+//                }
                 chapter.chapterIndex = @(chapterIndex);
-                chapter.pageRangeArray = pageRangeArray;
-                chapter.numberOfPages = @(chapterPageNumber);
+//                chapter.pageRangeArray = pageRangeArray;
+//                chapter.numberOfPages = @(chapterPageNumber);
                 [self.chapterArray addObject:chapter];
                 chapterIndex++;
                 dispatch_async(dispatch_get_main_queue(), ^(){

@@ -14,50 +14,50 @@
 		7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6775EBE9344211AE4DA59A /* libPods.a */; };
 		99A671595652453691C40955 /* LEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8006846039646548E17CD37 /* LEGAppDelegate.m */; };
 		AD11CDDD1910AD61002E9E0A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */; };
-		AD11CDF01910B393002E9E0A /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE01910B393002E9E0A /* AppIcon29x29.png */; };
-		AD11CDF11910B393002E9E0A /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */; };
-		AD11CDF21910B393002E9E0A /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE21910B393002E9E0A /* AppIcon40x40.png */; };
-		AD11CDF31910B393002E9E0A /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */; };
-		AD11CDF41910B393002E9E0A /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE41910B393002E9E0A /* AppIcon50x50.png */; };
-		AD11CDF51910B393002E9E0A /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */; };
-		AD11CDF61910B393002E9E0A /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE61910B393002E9E0A /* AppIcon57x57.png */; };
-		AD11CDF71910B393002E9E0A /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */; };
-		AD11CDF81910B393002E9E0A /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE81910B393002E9E0A /* AppIcon60x60.png */; };
-		AD11CDF91910B393002E9E0A /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */; };
-		AD11CDFA1910B393002E9E0A /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */; };
-		AD11CDFB1910B393002E9E0A /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */; };
-		AD11CDFC1910B393002E9E0A /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */; };
-		AD11CDFD1910B393002E9E0A /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */; };
-		AD11CDFE1910B393002E9E0A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */; };
-		AD11CDFF1910B393002E9E0A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */; };
-		AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */; };
 		AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */; };
-		AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */; };
+		AD1D42A318EDD15A00EADCA6 /* LEGChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGChapterViewController.m */; };
 		AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */; };
 		AD1D42B318EE399300EADCA6 /* LEGEpubContentPager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */; };
-		AD1D42B518EF309100EADCA6 /* tolstoy-war-and-peace.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */; };
 		AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */; };
 		AD1D42BE18EF6F2500EADCA6 /* LEGLibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */; };
-		AD1D42D018F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */; };
-		AD1D42D118F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */; };
-		AD1D42D218F35AC200EADCA6 /* Daniel H. Pink - Drive.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */; };
-		AD1D42D318F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */; };
-		AD1D42D418F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */; };
-		AD1D42D518F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */; };
-		AD1D42D618F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */; };
-		AD1D42D718F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */; };
-		AD1D42D818F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */; };
-		AD1D42D918F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */; };
-		AD1D42DA18F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */; };
-		AD1D42DB18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */; };
-		AD1D42DC18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */; };
-		AD1D42DD18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */; };
-		AD1D42DE18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */; };
-		AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */; };
-		AD1D42E018F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */; };
+		AD4065E31912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D21912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */; };
+		AD4065E41912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D31912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */; };
+		AD4065E51912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D41912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */; };
+		AD4065E61912F666007DED48 /* Daniel H. Pink - Drive.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D51912F666007DED48 /* Daniel H. Pink - Drive.epub */; };
+		AD4065E71912F666007DED48 /* Frank Chimero - The Shape of Design.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D61912F666007DED48 /* Frank Chimero - The Shape of Design.epub */; };
+		AD4065E81912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D71912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */; };
+		AD4065E91912F666007DED48 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D81912F666007DED48 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */; };
+		AD4065EA1912F666007DED48 /* Jules Verne - Around the World in Eighty Days.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065D91912F666007DED48 /* Jules Verne - Around the World in Eighty Days.epub */; };
+		AD4065EB1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DA1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */; };
+		AD4065EC1912F666007DED48 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DB1912F666007DED48 /* Kyle Loudon - Mastering Algorithms with C.epub */; };
+		AD4065ED1912F666007DED48 /* Marcin Treder - UX Design for Startups.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DC1912F666007DED48 /* Marcin Treder - UX Design for Startups.epub */; };
+		AD4065EE1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DD1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */; };
+		AD4065EF1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DE1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub */; };
+		AD4065F01912F666007DED48 /* Sun Tzu - The Art of War.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065DF1912F666007DED48 /* Sun Tzu - The Art of War.epub */; };
+		AD4065F11912F666007DED48 /* tolstoy-war-and-peace.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065E01912F666007DED48 /* tolstoy-war-and-peace.epub */; };
+		AD4065F21912F666007DED48 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065E11912F666007DED48 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */; };
+		AD4065F31912F666007DED48 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD4065E21912F666007DED48 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */; };
+		AD4065F71912FD21007DED48 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD4065F51912FD21007DED48 /* Montserrat-Bold.ttf */; };
+		AD4065F81912FD21007DED48 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD4065F61912FD21007DED48 /* Montserrat-Regular.ttf */; };
 		AD5BCA41190EFFB800CA1A36 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA3F190EFFB800CA1A36 /* Model.xcdatamodeld */; };
-		AD5BCA47190F009E00CA1A36 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA46190F009E00CA1A36 /* Book.m */; };
 		AD5BCA4A190F01B900CA1A36 /* BookOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5BCA49190F01B900CA1A36 /* BookOperations.m */; };
+		ADC01D5D191350D900F894DF /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC01D5C191350D900F894DF /* Book.m */; };
+		ADC01D6F1913671400F894DF /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D5F1913671400F894DF /* AppIcon29x29.png */; };
+		ADC01D701913671400F894DF /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D601913671400F894DF /* AppIcon29x29@2x.png */; };
+		ADC01D711913671400F894DF /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D611913671400F894DF /* AppIcon40x40.png */; };
+		ADC01D721913671400F894DF /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D621913671400F894DF /* AppIcon40x40@2x.png */; };
+		ADC01D731913671400F894DF /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D631913671400F894DF /* AppIcon50x50.png */; };
+		ADC01D741913671400F894DF /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D641913671400F894DF /* AppIcon50x50@2x.png */; };
+		ADC01D751913671400F894DF /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D651913671400F894DF /* AppIcon57x57.png */; };
+		ADC01D761913671400F894DF /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D661913671400F894DF /* AppIcon57x57@2x.png */; };
+		ADC01D771913671400F894DF /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D671913671400F894DF /* AppIcon60x60.png */; };
+		ADC01D781913671400F894DF /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D681913671400F894DF /* AppIcon60x60@2x.png */; };
+		ADC01D791913671400F894DF /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D691913671400F894DF /* AppIcon72x72.png */; };
+		ADC01D7A1913671400F894DF /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6A1913671400F894DF /* AppIcon72x72@2x.png */; };
+		ADC01D7B1913671400F894DF /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6B1913671400F894DF /* AppIcon76x76.png */; };
+		ADC01D7C1913671400F894DF /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6C1913671400F894DF /* AppIcon76x76@2x.png */; };
+		ADC01D7D1913671400F894DF /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6D1913671400F894DF /* iTunesArtwork.png */; };
+		ADC01D7E1913671400F894DF /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6E1913671400F894DF /* iTunesArtwork@2x.png */; };
 		ADD8984E18FC9A330080D411 /* userStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ADD8984D18FC9A330080D411 /* userStyle.css */; };
 /* End PBXBuildFile section */
 
@@ -82,59 +82,59 @@
 		A2735D05CA504DA2889505EE /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		A8006846039646548E17CD37 /* LEGAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEGAppDelegate.m; sourceTree = "<group>"; };
 		AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		AD11CDE01910B393002E9E0A /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
-		AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
-		AD11CDE21910B393002E9E0A /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
-		AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
-		AD11CDE41910B393002E9E0A /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
-		AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
-		AD11CDE61910B393002E9E0A /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
-		AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
-		AD11CDE81910B393002E9E0A /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
-		AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
-		AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
-		AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
-		AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
-		AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
-		AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub"; sourceTree = "<group>"; };
 		AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGMainViewController.h; sourceTree = "<group>"; };
 		AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGMainViewController.m; sourceTree = "<group>"; };
-		AD1D42A118EDD15A00EADCA6 /* LEGPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGPageViewController.h; sourceTree = "<group>"; };
-		AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGPageViewController.m; sourceTree = "<group>"; };
+		AD1D42A118EDD15A00EADCA6 /* LEGChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGChapterViewController.h; sourceTree = "<group>"; };
+		AD1D42A218EDD15A00EADCA6 /* LEGChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGChapterViewController.m; sourceTree = "<group>"; };
 		AD1D42A418EE100700EADCA6 /* LEGEpubDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubDataSource.h; sourceTree = "<group>"; };
 		AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubDataSource.m; sourceTree = "<group>"; };
 		AD1D42A918EE116400EADCA6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AD1D42B118EE399300EADCA6 /* LEGEpubContentPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubContentPager.h; sourceTree = "<group>"; };
 		AD1D42B218EE399300EADCA6 /* LEGEpubContentPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubContentPager.m; sourceTree = "<group>"; };
-		AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tolstoy-war-and-peace.epub"; sourceTree = "<group>"; };
 		AD1D42B618EF385C00EADCA6 /* LEGEpubChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGEpubChapter.h; sourceTree = "<group>"; };
 		AD1D42B718EF385C00EADCA6 /* LEGEpubChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGEpubChapter.m; sourceTree = "<group>"; };
 		AD1D42BC18EF6F2500EADCA6 /* LEGLibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGLibraryTableViewController.h; sourceTree = "<group>"; };
 		AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGLibraryTableViewController.m; sourceTree = "<group>"; };
-		AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub"; sourceTree = "<group>"; };
-		AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub"; sourceTree = "<group>"; };
-		AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Daniel H. Pink - Drive.epub"; sourceTree = "<group>"; };
-		AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frank Chimero - The Shape of Design.epub"; sourceTree = "<group>"; };
-		AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub"; sourceTree = "<group>"; };
-		AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub"; sourceTree = "<group>"; };
-		AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jules Verne - Around the World in Eighty Days.epub"; sourceTree = "<group>"; };
-		AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khang Vo - Pro iOS Apps Performance Optimization.epub"; sourceTree = "<group>"; };
-		AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kyle Loudon - Mastering Algorithms with C.epub"; sourceTree = "<group>"; };
-		AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marcin Treder - UX Design for Startups.epub"; sourceTree = "<group>"; };
-		AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf"; sourceTree = "<group>"; };
-		AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub"; sourceTree = "<group>"; };
-		AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Steve Krug - Don't Make Me Think.epub"; sourceTree = "<group>"; };
-		AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Steve S. Skiena - The Algorithm Design Manual.pdf"; sourceTree = "<group>"; };
-		AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sun Tzu - The Art of War.epub"; sourceTree = "<group>"; };
-		AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub"; sourceTree = "<group>"; };
-		AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub"; sourceTree = "<group>"; };
+		AD4065D21912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub"; sourceTree = "<group>"; };
+		AD4065D31912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub"; sourceTree = "<group>"; };
+		AD4065D41912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub"; sourceTree = "<group>"; };
+		AD4065D51912F666007DED48 /* Daniel H. Pink - Drive.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Daniel H. Pink - Drive.epub"; sourceTree = "<group>"; };
+		AD4065D61912F666007DED48 /* Frank Chimero - The Shape of Design.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frank Chimero - The Shape of Design.epub"; sourceTree = "<group>"; };
+		AD4065D71912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub"; sourceTree = "<group>"; };
+		AD4065D81912F666007DED48 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub"; sourceTree = "<group>"; };
+		AD4065D91912F666007DED48 /* Jules Verne - Around the World in Eighty Days.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jules Verne - Around the World in Eighty Days.epub"; sourceTree = "<group>"; };
+		AD4065DA1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khang Vo - Pro iOS Apps Performance Optimization.epub"; sourceTree = "<group>"; };
+		AD4065DB1912F666007DED48 /* Kyle Loudon - Mastering Algorithms with C.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kyle Loudon - Mastering Algorithms with C.epub"; sourceTree = "<group>"; };
+		AD4065DC1912F666007DED48 /* Marcin Treder - UX Design for Startups.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marcin Treder - UX Design for Startups.epub"; sourceTree = "<group>"; };
+		AD4065DD1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub"; sourceTree = "<group>"; };
+		AD4065DE1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Steve Krug - Don't Make Me Think.epub"; sourceTree = "<group>"; };
+		AD4065DF1912F666007DED48 /* Sun Tzu - The Art of War.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sun Tzu - The Art of War.epub"; sourceTree = "<group>"; };
+		AD4065E01912F666007DED48 /* tolstoy-war-and-peace.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tolstoy-war-and-peace.epub"; sourceTree = "<group>"; };
+		AD4065E11912F666007DED48 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub"; sourceTree = "<group>"; };
+		AD4065E21912F666007DED48 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub"; sourceTree = "<group>"; };
+		AD4065F51912FD21007DED48 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		AD4065F61912FD21007DED48 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		AD5BCA40190EFFB800CA1A36 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		AD5BCA45190F009E00CA1A36 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		AD5BCA46190F009E00CA1A36 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		AD5BCA48190F01B900CA1A36 /* BookOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOperations.h; sourceTree = "<group>"; };
 		AD5BCA49190F01B900CA1A36 /* BookOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOperations.m; sourceTree = "<group>"; };
+		ADC01D5B191350D900F894DF /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		ADC01D5C191350D900F894DF /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		ADC01D5F1913671400F894DF /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		ADC01D601913671400F894DF /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		ADC01D611913671400F894DF /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		ADC01D621913671400F894DF /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		ADC01D631913671400F894DF /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		ADC01D641913671400F894DF /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		ADC01D651913671400F894DF /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		ADC01D661913671400F894DF /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		ADC01D671913671400F894DF /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		ADC01D681913671400F894DF /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		ADC01D691913671400F894DF /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		ADC01D6A1913671400F894DF /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		ADC01D6B1913671400F894DF /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		ADC01D6C1913671400F894DF /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		ADC01D6D1913671400F894DF /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		ADC01D6E1913671400F894DF /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		ADD8984D18FC9A330080D411 /* userStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = userStyle.css; sourceTree = "<group>"; };
 		C8E71C55987E49AA943A95C5 /* Legible-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Legible-Prefix.pch"; sourceTree = "<group>"; };
 		D40459F5761C4367A14ED92C /* LEGAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEGAppDelegate.h; sourceTree = "<group>"; };
@@ -276,7 +276,6 @@
 		5BC92E55533D4541A23D3A3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AD11CDDE1910B393002E9E0A /* App Icons */,
 				A2735D05CA504DA2889505EE /* UnitTests-Info.plist */,
 				922C3ECDC7E644D39B2AA0CD /* UnitTests-Prefix.pch */,
 			);
@@ -330,27 +329,11 @@
 		9DE32C13D0914FFFAEB49A67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD4065F41912FD21007DED48 /* Fonts */,
+				AD4065D11912F666007DED48 /* epubs */,
+				AD11CDDE1910B393002E9E0A /* App Icons */,
 				ADD8984D18FC9A330080D411 /* userStyle.css */,
 				AD1D42A718EE114500EADCA6 /* Core Data */,
-				AD1D429C18ECDBAB00EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
-				AD1D42B418EF309100EADCA6 /* tolstoy-war-and-peace.epub */,
-				AD1D42BF18F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */,
-				AD1D42C018F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */,
-				AD1D42C118F35AC200EADCA6 /* Daniel H. Pink - Drive.epub */,
-				AD1D42C218F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub */,
-				AD1D42C318F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */,
-				AD1D42C418F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */,
-				AD1D42C518F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub */,
-				AD1D42C618F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */,
-				AD1D42C718F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub */,
-				AD1D42C818F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub */,
-				AD1D42C918F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf */,
-				AD1D42CA18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */,
-				AD1D42CB18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub */,
-				AD1D42CC18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf */,
-				AD1D42CD18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub */,
-				AD1D42CE18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */,
-				AD1D42CF18F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */,
 				E3F0C3F3EEBB43658AED1638 /* Images.xcassets */,
 				E4B5654CABBB41C6AB93E12D /* Storyboards */,
 				1746632051DF400A9007F630 /* Nibs */,
@@ -362,34 +345,11 @@
 		AD11CDDE1910B393002E9E0A /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
-				AD11CDDF1910B393002E9E0A /* App Icon [Squared] */,
+				ADC01D5E1913671400F894DF /* App Icons [Squared] */,
 			);
 			name = "App Icons";
 			path = "Resources/App Icons";
 			sourceTree = SOURCE_ROOT;
-		};
-		AD11CDDF1910B393002E9E0A /* App Icon [Squared] */ = {
-			isa = PBXGroup;
-			children = (
-				AD11CDE01910B393002E9E0A /* AppIcon29x29.png */,
-				AD11CDE11910B393002E9E0A /* AppIcon29x29@2x.png */,
-				AD11CDE21910B393002E9E0A /* AppIcon40x40.png */,
-				AD11CDE31910B393002E9E0A /* AppIcon40x40@2x.png */,
-				AD11CDE41910B393002E9E0A /* AppIcon50x50.png */,
-				AD11CDE51910B393002E9E0A /* AppIcon50x50@2x.png */,
-				AD11CDE61910B393002E9E0A /* AppIcon57x57.png */,
-				AD11CDE71910B393002E9E0A /* AppIcon57x57@2x.png */,
-				AD11CDE81910B393002E9E0A /* AppIcon60x60.png */,
-				AD11CDE91910B393002E9E0A /* AppIcon60x60@2x.png */,
-				AD11CDEA1910B393002E9E0A /* AppIcon72x72.png */,
-				AD11CDEB1910B393002E9E0A /* AppIcon72x72@2x.png */,
-				AD11CDEC1910B393002E9E0A /* AppIcon76x76.png */,
-				AD11CDED1910B393002E9E0A /* AppIcon76x76@2x.png */,
-				AD11CDEE1910B393002E9E0A /* iTunesArtwork.png */,
-				AD11CDEF1910B393002E9E0A /* iTunesArtwork@2x.png */,
-			);
-			path = "App Icon [Squared]";
-			sourceTree = "<group>";
 		};
 		AD1D42A718EE114500EADCA6 /* Core Data */ = {
 			isa = PBXGroup;
@@ -399,25 +359,82 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		AD4065D11912F666007DED48 /* epubs */ = {
+			isa = PBXGroup;
+			children = (
+				AD4065D21912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */,
+				AD4065D31912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
+				AD4065D41912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */,
+				AD4065D51912F666007DED48 /* Daniel H. Pink - Drive.epub */,
+				AD4065D61912F666007DED48 /* Frank Chimero - The Shape of Design.epub */,
+				AD4065D71912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub */,
+				AD4065D81912F666007DED48 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub */,
+				AD4065D91912F666007DED48 /* Jules Verne - Around the World in Eighty Days.epub */,
+				AD4065DA1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub */,
+				AD4065DB1912F666007DED48 /* Kyle Loudon - Mastering Algorithms with C.epub */,
+				AD4065DC1912F666007DED48 /* Marcin Treder - UX Design for Startups.epub */,
+				AD4065DD1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub */,
+				AD4065DE1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub */,
+				AD4065DF1912F666007DED48 /* Sun Tzu - The Art of War.epub */,
+				AD4065E01912F666007DED48 /* tolstoy-war-and-peace.epub */,
+				AD4065E11912F666007DED48 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub */,
+				AD4065E21912F666007DED48 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub */,
+			);
+			path = epubs;
+			sourceTree = "<group>";
+		};
+		AD4065F41912FD21007DED48 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AD4065F51912FD21007DED48 /* Montserrat-Bold.ttf */,
+				AD4065F61912FD21007DED48 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AD5BCA3E190EFFA800CA1A36 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				AD5BCA45190F009E00CA1A36 /* Book.h */,
-				AD5BCA46190F009E00CA1A36 /* Book.m */,
 				AD5BCA3F190EFFB800CA1A36 /* Model.xcdatamodeld */,
+				ADC01D5B191350D900F894DF /* Book.h */,
+				ADC01D5C191350D900F894DF /* Book.m */,
 				AD5BCA48190F01B900CA1A36 /* BookOperations.h */,
 				AD5BCA49190F01B900CA1A36 /* BookOperations.m */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		ADC01D5E1913671400F894DF /* App Icons [Squared] */ = {
+			isa = PBXGroup;
+			children = (
+				ADC01D5F1913671400F894DF /* AppIcon29x29.png */,
+				ADC01D601913671400F894DF /* AppIcon29x29@2x.png */,
+				ADC01D611913671400F894DF /* AppIcon40x40.png */,
+				ADC01D621913671400F894DF /* AppIcon40x40@2x.png */,
+				ADC01D631913671400F894DF /* AppIcon50x50.png */,
+				ADC01D641913671400F894DF /* AppIcon50x50@2x.png */,
+				ADC01D651913671400F894DF /* AppIcon57x57.png */,
+				ADC01D661913671400F894DF /* AppIcon57x57@2x.png */,
+				ADC01D671913671400F894DF /* AppIcon60x60.png */,
+				ADC01D681913671400F894DF /* AppIcon60x60@2x.png */,
+				ADC01D691913671400F894DF /* AppIcon72x72.png */,
+				ADC01D6A1913671400F894DF /* AppIcon72x72@2x.png */,
+				ADC01D6B1913671400F894DF /* AppIcon76x76.png */,
+				ADC01D6C1913671400F894DF /* AppIcon76x76@2x.png */,
+				ADC01D6D1913671400F894DF /* iTunesArtwork.png */,
+				ADC01D6E1913671400F894DF /* iTunesArtwork@2x.png */,
+			);
+			name = "App Icons [Squared]";
+			path = "Resources/App Icons [Squared]";
+			sourceTree = SOURCE_ROOT;
+		};
 		CB8FA19D5E0849798909FD4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */,
 				AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */,
-				AD1D42A118EDD15A00EADCA6 /* LEGPageViewController.h */,
-				AD1D42A218EDD15A00EADCA6 /* LEGPageViewController.m */,
+				AD1D42A118EDD15A00EADCA6 /* LEGChapterViewController.h */,
+				AD1D42A218EDD15A00EADCA6 /* LEGChapterViewController.m */,
 				AD1D42BC18EF6F2500EADCA6 /* LEGLibraryTableViewController.h */,
 				AD1D42BD18EF6F2500EADCA6 /* LEGLibraryTableViewController.m */,
 			);
@@ -520,22 +537,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD11CDF91910B393002E9E0A /* AppIcon60x60@2x.png in Resources */,
-				AD11CDFA1910B393002E9E0A /* AppIcon72x72.png in Resources */,
-				AD11CDF41910B393002E9E0A /* AppIcon50x50.png in Resources */,
-				AD11CDFF1910B393002E9E0A /* iTunesArtwork@2x.png in Resources */,
-				AD11CDFE1910B393002E9E0A /* iTunesArtwork.png in Resources */,
-				AD11CDFC1910B393002E9E0A /* AppIcon76x76.png in Resources */,
-				AD11CDF11910B393002E9E0A /* AppIcon29x29@2x.png in Resources */,
-				AD11CDF71910B393002E9E0A /* AppIcon57x57@2x.png in Resources */,
-				AD11CDF51910B393002E9E0A /* AppIcon50x50@2x.png in Resources */,
-				AD11CDF81910B393002E9E0A /* AppIcon60x60.png in Resources */,
-				AD11CDF61910B393002E9E0A /* AppIcon57x57.png in Resources */,
-				AD11CDFB1910B393002E9E0A /* AppIcon72x72@2x.png in Resources */,
-				AD11CDF21910B393002E9E0A /* AppIcon40x40.png in Resources */,
-				AD11CDF31910B393002E9E0A /* AppIcon40x40@2x.png in Resources */,
-				AD11CDFD1910B393002E9E0A /* AppIcon76x76@2x.png in Resources */,
-				AD11CDF01910B393002E9E0A /* AppIcon29x29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,27 +544,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4065F81912FD21007DED48 /* Montserrat-Regular.ttf in Resources */,
+				AD4065F71912FD21007DED48 /* Montserrat-Bold.ttf in Resources */,
 				699BFC95CE6D475784108ED3 /* Images.xcassets in Resources */,
-				AD1D42D318F35AC200EADCA6 /* Frank Chimero - The Shape of Design.epub in Resources */,
-				AD1D42D418F35AC200EADCA6 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */,
-				AD1D42D918F35AC200EADCA6 /* Marcin Treder - UX Design for Startups.epub in Resources */,
-				AD1D42D518F35AC200EADCA6 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */,
-				AD1D42D218F35AC200EADCA6 /* Daniel H. Pink - Drive.epub in Resources */,
+				AD4065F31912F666007DED48 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */,
+				AD4065ED1912F666007DED48 /* Marcin Treder - UX Design for Startups.epub in Resources */,
 				ADD8984E18FC9A330080D411 /* userStyle.css in Resources */,
-				AD1D42DC18F35AC200EADCA6 /* Steve Krug - Don't Make Me Think.epub in Resources */,
-				AD1D42DF18F35AC200EADCA6 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */,
-				AD1D42D018F35AC200EADCA6 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */,
-				AD1D42D818F35AC200EADCA6 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */,
-				AD1D42DD18F35AC200EADCA6 /* Steve S. Skiena - The Algorithm Design Manual.pdf in Resources */,
-				AD1D42D718F35AC200EADCA6 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */,
-				AD1D429D18ECDC8200EADCA6 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */,
-				AD1D42DB18F35AC200EADCA6 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */,
-				AD1D42D118F35AC200EADCA6 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */,
-				AD1D42D618F35AC200EADCA6 /* Jules Verne - Around the World in Eighty Days.epub in Resources */,
-				AD1D42E018F35AC200EADCA6 /* Vogelstein, Fred - Dogfight, How Apple and Google Went to War and Started a Revolution.epub in Resources */,
-				AD1D42B518EF309100EADCA6 /* tolstoy-war-and-peace.epub in Resources */,
-				AD1D42DE18F35AC200EADCA6 /* Sun Tzu - The Art of War.epub in Resources */,
-				AD1D42DA18F35AC200EADCA6 /* Mattt Thompson - NSHipster - Obscure Topics in Cocoa & Objective C.pdf in Resources */,
+				ADC01D761913671400F894DF /* AppIcon57x57@2x.png in Resources */,
+				ADC01D7D1913671400F894DF /* iTunesArtwork.png in Resources */,
+				AD4065E41912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */,
+				AD4065EB1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */,
+				AD4065E71912F666007DED48 /* Frank Chimero - The Shape of Design.epub in Resources */,
+				AD4065EF1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub in Resources */,
+				AD4065E81912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */,
+				ADC01D7C1913671400F894DF /* AppIcon76x76@2x.png in Resources */,
+				ADC01D721913671400F894DF /* AppIcon40x40@2x.png in Resources */,
+				ADC01D7E1913671400F894DF /* iTunesArtwork@2x.png in Resources */,
+				ADC01D781913671400F894DF /* AppIcon60x60@2x.png in Resources */,
+				AD4065EE1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */,
+				AD4065E61912F666007DED48 /* Daniel H. Pink - Drive.epub in Resources */,
+				ADC01D741913671400F894DF /* AppIcon50x50@2x.png in Resources */,
+				ADC01D711913671400F894DF /* AppIcon40x40.png in Resources */,
+				AD4065F21912F666007DED48 /* Unknown - Apress.Pro.Core.Data.for.iOS.Jan.epub in Resources */,
+				ADC01D751913671400F894DF /* AppIcon57x57.png in Resources */,
+				ADC01D771913671400F894DF /* AppIcon60x60.png in Resources */,
+				ADC01D7B1913671400F894DF /* AppIcon76x76.png in Resources */,
+				AD4065E31912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub in Resources */,
+				AD4065EC1912F666007DED48 /* Kyle Loudon - Mastering Algorithms with C.epub in Resources */,
+				ADC01D791913671400F894DF /* AppIcon72x72.png in Resources */,
+				AD4065E51912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub in Resources */,
+				ADC01D701913671400F894DF /* AppIcon29x29@2x.png in Resources */,
+				ADC01D7A1913671400F894DF /* AppIcon72x72@2x.png in Resources */,
+				AD4065E91912F666007DED48 /* Holiday, Ryan - Growth Hacker Marketing, A Primer on the Future of PR, Marketing, and Advertising (APenguin Special from Portfolio).epub in Resources */,
+				AD4065F11912F666007DED48 /* tolstoy-war-and-peace.epub in Resources */,
+				ADC01D6F1913671400F894DF /* AppIcon29x29.png in Resources */,
+				AD4065F01912F666007DED48 /* Sun Tzu - The Art of War.epub in Resources */,
+				AD4065EA1912F666007DED48 /* Jules Verne - Around the World in Eighty Days.epub in Resources */,
+				ADC01D731913671400F894DF /* AppIcon50x50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,8 +692,8 @@
 				AD1D42BE18EF6F2500EADCA6 /* LEGLibraryTableViewController.m in Sources */,
 				99A671595652453691C40955 /* LEGAppDelegate.m in Sources */,
 				AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */,
-				AD5BCA47190F009E00CA1A36 /* Book.m in Sources */,
-				AD1D42A318EDD15A00EADCA6 /* LEGPageViewController.m in Sources */,
+				ADC01D5D191350D900F894DF /* Book.m in Sources */,
+				AD1D42A318EDD15A00EADCA6 /* LEGChapterViewController.m in Sources */,
 				AD5BCA4A190F01B900CA1A36 /* BookOperations.m in Sources */,
 				5725CA73579B4337897A4BCF /* main.m in Sources */,
 				AD5BCA41190EFFB800CA1A36 /* Model.xcdatamodeld in Sources */,
@@ -722,8 +739,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Truman (XL8C53TT76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Christopher Truman (XL8C53TT76)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -777,8 +794,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Azusa Pacific University (Computer Science) (PP6S682Z9F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Azusa Pacific University (Computer Science) (PP6S682Z9F)";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -821,7 +838,7 @@
 					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB7D1BBD-3FF5-4414-99D2-EB85CBF2C28E";
+				PROVISIONING_PROFILE = "7CC58B19-2A54-4BAB-90F5-CDA1B3D532DD";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;

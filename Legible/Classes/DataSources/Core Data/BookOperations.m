@@ -40,4 +40,22 @@
     }];
 }
 
++(void)setLastChapterIndex:(NSNumber *) lastChapter forBook:(Book *)book{
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext * localContext){
+        Book * localBook = [book MR_inContext:localContext];
+        localBook.lastChapter = lastChapter;
+        [localContext MR_saveToPersistentStoreAndWait];
+    }completion:^(BOOL success, NSError * error){
+    }];
+}
+
++(void)setLastPageIndex:(NSNumber *) lastPage forBook:(Book *)book{
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext * localContext){
+        Book * localBook = [book MR_inContext:localContext];
+        localBook.lastPage = lastPage;
+        [localContext MR_saveToPersistentStoreAndWait];
+    }completion:^(BOOL success, NSError * error){
+    }];
+}
+
 @end
