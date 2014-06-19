@@ -14,6 +14,7 @@
 		7CE81026CB634F2997C76B87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6775EBE9344211AE4DA59A /* libPods.a */; };
 		99A671595652453691C40955 /* LEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8006846039646548E17CD37 /* LEGAppDelegate.m */; };
 		AD11CDDD1910AD61002E9E0A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */; };
+		AD149EC71936985200255414 /* AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub in Resources */ = {isa = PBXBuildFile; fileRef = AD149EC61936985200255414 /* AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub */; };
 		AD1D42A018EDD02600EADCA6 /* LEGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */; };
 		AD1D42A318EDD15A00EADCA6 /* LEGChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A218EDD15A00EADCA6 /* LEGChapterViewController.m */; };
 		AD1D42A618EE100700EADCA6 /* LEGEpubDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1D42A518EE100700EADCA6 /* LEGEpubDataSource.m */; };
@@ -58,6 +59,8 @@
 		ADC01D7C1913671400F894DF /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6C1913671400F894DF /* AppIcon76x76@2x.png */; };
 		ADC01D7D1913671400F894DF /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6D1913671400F894DF /* iTunesArtwork.png */; };
 		ADC01D7E1913671400F894DF /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D6E1913671400F894DF /* iTunesArtwork@2x.png */; };
+		ADC01D841914337700F894DF /* LEGBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC01D821914337700F894DF /* LEGBookTableViewCell.m */; };
+		ADC01D851914337700F894DF /* LEGBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC01D831914337700F894DF /* LEGBookTableViewCell.xib */; };
 		ADD8984E18FC9A330080D411 /* userStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = ADD8984D18FC9A330080D411 /* userStyle.css */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,7 @@
 		A2735D05CA504DA2889505EE /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		A8006846039646548E17CD37 /* LEGAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEGAppDelegate.m; sourceTree = "<group>"; };
 		AD11CDDC1910AD61002E9E0A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		AD149EC61936985200255414 /* AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub; sourceTree = "<group>"; };
 		AD1D429E18EDD02600EADCA6 /* LEGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGMainViewController.h; sourceTree = "<group>"; };
 		AD1D429F18EDD02600EADCA6 /* LEGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGMainViewController.m; sourceTree = "<group>"; };
 		AD1D42A118EDD15A00EADCA6 /* LEGChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGChapterViewController.h; sourceTree = "<group>"; };
@@ -135,6 +139,9 @@
 		ADC01D6C1913671400F894DF /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		ADC01D6D1913671400F894DF /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		ADC01D6E1913671400F894DF /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		ADC01D811914337700F894DF /* LEGBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGBookTableViewCell.h; sourceTree = "<group>"; };
+		ADC01D821914337700F894DF /* LEGBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGBookTableViewCell.m; sourceTree = "<group>"; };
+		ADC01D831914337700F894DF /* LEGBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LEGBookTableViewCell.xib; sourceTree = "<group>"; };
 		ADD8984D18FC9A330080D411 /* userStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = userStyle.css; sourceTree = "<group>"; };
 		C8E71C55987E49AA943A95C5 /* Legible-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Legible-Prefix.pch"; sourceTree = "<group>"; };
 		D40459F5761C4367A14ED92C /* LEGAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEGAppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +232,7 @@
 		381B0B1E07114F13A9854644 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADC01D801914336300F894DF /* Table Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 		AD4065D11912F666007DED48 /* epubs */ = {
 			isa = PBXGroup;
 			children = (
+				AD149EC61936985200255414 /* AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub */,
 				AD4065D21912F666007DED48 /* Alexis Ohanian - Without Their Permission, How the 21st Century Will Be Made, Not Managed.epub */,
 				AD4065D31912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub */,
 				AD4065D41912F666007DED48 /* Clive Thompson - Public Thinking (Adapted from Smarter Than You Think).epub */,
@@ -427,6 +436,16 @@
 			name = "App Icons [Squared]";
 			path = "Resources/App Icons [Squared]";
 			sourceTree = SOURCE_ROOT;
+		};
+		ADC01D801914336300F894DF /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ADC01D811914337700F894DF /* LEGBookTableViewCell.h */,
+				ADC01D821914337700F894DF /* LEGBookTableViewCell.m */,
+				ADC01D831914337700F894DF /* LEGBookTableViewCell.xib */,
+			);
+			path = "Table Cells";
+			sourceTree = "<group>";
 		};
 		CB8FA19D5E0849798909FD4F /* ViewControllers */ = {
 			isa = PBXGroup;
@@ -555,10 +574,12 @@
 				AD4065E41912F666007DED48 /* Brad Stone - The Everything Store, Jeff Bezos and the Age of Amazon.epub in Resources */,
 				AD4065EB1912F666007DED48 /* Khang Vo - Pro iOS Apps Performance Optimization.epub in Resources */,
 				AD4065E71912F666007DED48 /* Frank Chimero - The Shape of Design.epub in Resources */,
+				AD149EC71936985200255414 /* AW.iOS.Auto.Layout.Demystified.2nd.Edition.0321967194.epub in Resources */,
 				AD4065EF1912F666007DED48 /* Steve Krug - Don't Make Me Think.epub in Resources */,
 				AD4065E81912F666007DED48 /* Hardy, Brian - Android Programming, The Big Nerd Ranch Guide.epub in Resources */,
 				ADC01D7C1913671400F894DF /* AppIcon76x76@2x.png in Resources */,
 				ADC01D721913671400F894DF /* AppIcon40x40@2x.png in Resources */,
+				ADC01D851914337700F894DF /* LEGBookTableViewCell.xib in Resources */,
 				ADC01D7E1913671400F894DF /* iTunesArtwork@2x.png in Resources */,
 				ADC01D781913671400F894DF /* AppIcon60x60@2x.png in Resources */,
 				AD4065EE1912F666007DED48 /* Sir Arthur Conan Doyle - The Adventures of Sherlock Holmes.epub in Resources */,
@@ -695,6 +716,7 @@
 				ADC01D5D191350D900F894DF /* Book.m in Sources */,
 				AD1D42A318EDD15A00EADCA6 /* LEGChapterViewController.m in Sources */,
 				AD5BCA4A190F01B900CA1A36 /* BookOperations.m in Sources */,
+				ADC01D841914337700F894DF /* LEGBookTableViewCell.m in Sources */,
 				5725CA73579B4337897A4BCF /* main.m in Sources */,
 				AD5BCA41190EFFB800CA1A36 /* Model.xcdatamodeld in Sources */,
 				AD1D42B818EF385C00EADCA6 /* LEGEpubChapter.m in Sources */,
@@ -760,7 +782,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Legible/Resources/Other-Sources/Legible-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lxml2",
@@ -781,7 +803,7 @@
 					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB7D1BBD-3FF5-4414-99D2-EB85CBF2C28E";
+				PROVISIONING_PROFILE = "07BD1E69-3A1C-414F-8128-D084EFEA0303";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -809,7 +831,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Legible/Resources/Other-Sources/Legible-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
@@ -838,7 +860,7 @@
 					QuartzCore,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7CC58B19-2A54-4BAB-90F5-CDA1B3D532DD";
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -911,6 +933,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -955,6 +978,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

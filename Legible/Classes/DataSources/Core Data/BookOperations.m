@@ -34,6 +34,8 @@
         book.dateAdded = [NSDate date];
         book.filename = epubFileName;
         book.epubContentBaseURL = epubContentBaseURL;
+        book.lastChapter = @(0);
+        book.lastPage = @(0);
         [localContext MR_saveToPersistentStoreAndWait];
     }completion:^(BOOL success, NSError * error){
         completion();
@@ -44,8 +46,8 @@
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext * localContext){
         Book * localBook = [book MR_inContext:localContext];
         localBook.lastChapter = lastChapter;
-        [localContext MR_saveToPersistentStoreAndWait];
     }completion:^(BOOL success, NSError * error){
+        
     }];
 }
 
@@ -53,8 +55,8 @@
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext * localContext){
         Book * localBook = [book MR_inContext:localContext];
         localBook.lastPage = lastPage;
-        [localContext MR_saveToPersistentStoreAndWait];
     }completion:^(BOOL success, NSError * error){
+        
     }];
 }
 

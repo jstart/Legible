@@ -23,9 +23,9 @@
 
 @property (nonatomic, strong) KFEpubController * epubController;
 @property (nonatomic, strong) UIPageViewController * pageVC;
-@property (nonatomic, strong) NSMutableArray * viewControllers;
+@property (nonatomic, strong) NSMutableDictionary * viewControllerChapterDictionary;
 @property (nonatomic, strong) LEGEpubContentPager * epubContentPager;
-@property (nonatomic, strong) NSMutableArray * chapterArray;
+@property (nonatomic, strong) NSArray * chapterArray;
 @property (nonatomic, strong) NSNumber * currentChapterIndex;
 @property (nonatomic, strong) Book * book;
 
@@ -35,7 +35,7 @@
 
 -(instancetype)initWithBook:(Book *)book
 {
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.book = book;
     }
@@ -45,11 +45,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    self.viewControllers = [NSMutableArray array];
-    self.chapterArray = [NSMutableArray array];
-    self.currentChapterIndex = @(0);
+    self.viewControllerChapterDictionary = [NSMutableDictionary dictionary];
+    self.currentChapterIndex = self.book.lastChapter;
     
     self.pageVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self.pageVC.view setFrame:self.view.bounds];
@@ -60,7 +60,8 @@
     [self addChildViewController:self.pageVC];
     [self.view addSubview:self.pageVC.view];
     [self.pageVC didMoveToParentViewController:self];
-    
+    [self.pageVC setAutomaticallyAdjustsScrollViewInsets:NO];
+
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL * destinationURL = [documentsURL URLByAppendingPathComponent:self.book.filename];
     
@@ -76,6 +77,11 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [BookOperations setLastPageIndex:self.book.lastPage forBook:self.book];
+    [BookOperations setLastChapterIndex:self.currentChapterIndex forBook:self.book];
 }
 
 -(void)addGestureRecognizersToPageViewController:(LEGChapterViewController *)pageVC{
@@ -105,22 +111,24 @@
     // Dispose of any resources that can be recreated.
 }
 
--(LEGChapterViewController *)pageViewControllerForChapterIndex:(NSInteger)index{
+-(LEGChapterViewController *)pageViewControllerForChapterIndex:(NSNumber *)index{
     LEGChapterViewController * chapterVC;
-    if ((int)[self.viewControllers count] - 1 >= index) {
-        return (LEGChapterViewController *)[self.viewControllers objectAtIndex:index];
+    if ((int)[self.viewControllerChapterDictionary.allKeys count] - 1 >= [index integerValue]) {
+        return (LEGChapterViewController *)[self.viewControllerChapterDictionary objectForKey:index];
     }else{
-        chapterVC = [LEGChapterViewController pageViewControllerAtChapterIndex:index epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
+        chapterVC = [LEGChapterViewController chapterViewControllerAtIndex:[index integerValue] epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
         [self subscribeToCurrentPage:chapterVC];
         [self addGestureRecognizersToPageViewController:chapterVC];
-        [self.viewControllers insertObject:chapterVC atIndex:index];
+        [self.viewControllerChapterDictionary setObject:chapterVC forKey:index];
     }
     return chapterVC;
 }
 
 -(void)subscribeToCurrentPage:(LEGChapterViewController *)chapterVC{
     [RACObserve(chapterVC, currentPageNumber) subscribeNext:^(NSNumber *newNumber) {
-        [BookOperations setLastPageIndex:newNumber forBook:self.book];
+        if (newNumber && ![self.book.lastPage isEqualToNumber:newNumber]) {
+            self.book.lastPage = newNumber;
+        }
     }];
 }
 
@@ -129,17 +137,9 @@
 
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
-    [self.epubContentPager processWithSize:LEG_PAGE_SIZE andProgressBlock:^(LEGEpubChapter * chapter){
-        if ([chapter.chapterIndex integerValue] == 0) {
-            LEGChapterViewController * chapterVC = [LEGChapterViewController pageViewControllerAtChapterIndex:0 epubContentPager:self.epubContentPager size:LEG_PAGE_SIZE];
-            [self subscribeToCurrentPage:chapterVC];
-            [self addGestureRecognizersToPageViewController:chapterVC];
-            [self.pageVC setViewControllers:@[chapterVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-            [self.viewControllers addObject:chapterVC];
-            [self.chapterArray addObject:chapter];
-        }
-        [self.chapterArray addObject:chapter];
-    }];
+    LEGChapterViewController * chapterVC = [self pageViewControllerForChapterIndex:self.currentChapterIndex];
+    chapterVC.pageToScrollTo = self.book.lastPage;
+    [self.pageVC setViewControllers:@[chapterVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error{
@@ -158,7 +158,7 @@
     LEGChapterViewController * chapterVC;
     if (viewController != nil) {
         newPageIndex = (int) [pageVCBefore.chapterIndex integerValue] - 1;
-        chapterVC = [self pageViewControllerForChapterIndex:(newPageIndex)];
+        chapterVC = [self pageViewControllerForChapterIndex:@(newPageIndex)];
     }
     CGSize webContentSize = chapterVC.webView.scrollView.contentSize;
     CGRect lastPageRect = CGRectMake(webContentSize.width-320, 0, 320, [UIScreen mainScreen].bounds.size.height);
@@ -171,11 +171,13 @@
     LEGChapterViewController * pageVCAfter = (LEGChapterViewController *)viewController;
     if ([pageVCAfter.chapterIndex integerValue] + 1 == (int)[self.chapterArray count] - 1) {
         return nil;
-    }else{
-        [self pageViewControllerForChapterIndex:([pageVCAfter.chapterIndex integerValue]) + 1];
+    }
+    else if ([pageVCAfter.chapterIndex integerValue] + 2 == (int)[self.chapterArray count] - 1){
+        int nextNextChapterIndex = (int) [pageVCAfter.chapterIndex integerValue] + 2;
+        [self pageViewControllerForChapterIndex:@(nextNextChapterIndex)];
     }
     int nextChapterIndex = (int) [pageVCAfter.chapterIndex integerValue] + 1;
-    LEGChapterViewController *  pageVC = [self pageViewControllerForChapterIndex:(nextChapterIndex)];
+    LEGChapterViewController *  pageVC = [self pageViewControllerForChapterIndex:@(nextChapterIndex)];
     return pageVC;
 }
 
@@ -200,8 +202,6 @@
     if (finished && completed) {
         LEGChapterViewController * chapterVC = [self.pageVC.viewControllers lastObject];
         self.currentChapterIndex = chapterVC.chapterIndex;
-        NSLog(@"%@", chapterVC.chapterIndex);
-        [BookOperations setLastChapterIndex:self.currentChapterIndex forBook:self.book];
     }
 }
 

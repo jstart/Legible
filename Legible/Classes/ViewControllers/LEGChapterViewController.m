@@ -9,6 +9,7 @@
 #import "LEGChapterViewController.h"
 
 #import <DTCoreText/DTAttributedTextView.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #import "LEGEpubContentPager.h"
 #import "LEGEpubChapter.h"
@@ -29,13 +30,13 @@
     if (self) {
         // Custom initialization
         self.view.backgroundColor = [UIColor whiteColor];
-        self.textView = [[DTAttributedTextView alloc] initWithFrame:self.view.bounds];
-        [self.textContainer setWidthTracksTextView:YES];
+//        self.textView = [[DTAttributedTextView alloc] initWithFrame:self.view.bounds];
+//        [self.textContainer setWidthTracksTextView:YES];
 //        [self.textView setEditable:NO];
-        [self.textView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
-        [self.textView setShouldDrawImages:YES];
-        
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//        [self.textView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+//        [self.textView setShouldDrawImages:YES];
+        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        self.webView.scrollView.backgroundColor = [UIColor whiteColor];
         self.webView.backgroundColor = [UIColor whiteColor];
         [self.webView setDelegate:self];
         [self.webView setPaginationBreakingMode:UIWebPaginationBreakingModeColumn];
@@ -46,12 +47,12 @@
         [self.webView.scrollView setAlwaysBounceVertical:NO];
         [self.webView.scrollView setAlwaysBounceHorizontal:YES];
         [self.webView.scrollView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
-        [self.webView.scrollView setContentSize:CGSizeMake(self.view.bounds.size.width-20, self.view.bounds.size.height)];
+        
         [self.webView setBackgroundColor:[UIColor whiteColor]];
         
         [self.webView.scrollView setDelegate:self];
         
-        self.currentPageNumber = @(0);
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
     return self;
 }
@@ -64,7 +65,26 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.view addSubview:self.webView];
+    if (self.webView.superview == nil) {
+        [self.view addSubview:self.webView];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    self.webView.scrollView.contentOffset = CGPointZero;
+    self.webView.scrollView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
+}
+
+-(void)scrollToPage:(NSNumber *)pageNumber{
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    CGFloat contentOffset = [pageNumber floatValue] * screenSize.width;
+    CGRect pageRect = CGRectMake(contentOffset, -10, screenSize.width, screenSize.height-10);
+    [self.webView.scrollView scrollRectToVisible:pageRect animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,30 +102,24 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(){
         __block NSAttributedString * attributedString = [epubContentPager attributedStringForPage:[pageVC.chapterIndex integerValue] withChapterURL:chapterURL withSize:size];
         dispatch_async(dispatch_get_main_queue(), ^(){
-            [UIView animateWithDuration:0.3 animations:^(){
                 [pageVC.textView setAttributedString:attributedString];
                 pageVC.webView.alpha = 1.0;
                 NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
                 [pageVC.webView loadRequest:request];
-            }];
         });
     });
     return pageVC;
 }
 
-+(LEGChapterViewController *)pageViewControllerAtChapterIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size {
++(LEGChapterViewController *)chapterViewControllerAtIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size {
     __block LEGChapterViewController * pageVC = [[LEGChapterViewController alloc] init];
     pageVC.webView.alpha = 0.0;
     pageVC.chapterIndex = @(chapterIndex);
     __block NSURL * chapterURL = [epubContentPager chapterAtIndex:chapterIndex].spineFileURL;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(){
         dispatch_async(dispatch_get_main_queue(), ^(){
-            [UIView animateWithDuration:0.3 animations:^(){
-                pageVC.webView.alpha = 1.0;
-
                 NSURLRequest * request = [[NSURLRequest alloc] initWithURL:chapterURL];
                 [pageVC.webView loadRequest:request];
-            }];
         });
     });
     return pageVC;
@@ -121,6 +135,17 @@
 #pragma mark -
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [UIView animateWithDuration:0.3 animations:^(){
+        webView.alpha = 1.0;
+        if (self.pageToScrollTo) {
+            [self scrollToPage:self.pageToScrollTo];
+            self.pageToScrollTo = nil;
+        }
+    }];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+
 }
 /*
 #pragma mark - Navigation

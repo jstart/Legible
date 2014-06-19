@@ -16,11 +16,11 @@
 
 - (instancetype)initWithEpubController:(KFEpubController *)epubController;
 
-- (void)processWithSize:(CGSize)size andProgressBlock:(void (^)(LEGEpubChapter * chapter))progressBlock;
+- (void)processWithSize:(CGSize)size andCompletionBlock:(void (^)(NSArray * chapterArray))completionBlock;
 
 - (NSAttributedString *)attributedStringForPage:(NSInteger)pageIndex withChapterURL:(NSURL *)chapterURL withSize:(CGSize)size;
 
-- (int)numberOfPagesForSize:(CGSize)size;
+//- (int)numberOfPagesForSize:(CGSize)size;
 
 - (LEGEpubChapter *)chapterForPageIndex:(NSInteger)pageIndex;
 

@@ -10,6 +10,8 @@
 
 #import "LEGMainViewController.h"
 #import "LEGEpubDataSource.h"
+#import "LEGBookTableViewCell.h"
+
 #import <MagicalRecord/CoreData+MagicalRecord.h>
 #import "Book.h"
 
@@ -40,14 +42,7 @@
     
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
-    
-    fetchRequest.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES]];
-    [fetchRequest setFetchBatchSize:20];
-        
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[NSManagedObjectContext MR_contextForCurrentThread] sectionNameKeyPath:nil cacheName:nil];
-    
-    self.fetchedResultsController.delegate = self;
+    [self.tableView setContentInset:UIEdgeInsetsMake(10, 0, 0, 0)];
     
     NSArray * fileArray = [[NSBundle mainBundle] pathsForResourcesOfType:@".epub" inDirectory:@""];
     for (NSString * bookPath in fileArray) {
@@ -57,19 +52,35 @@
             if (![[self fetchedResultsController] performFetch:&error]) {
                 // Update to handle the error appropriately.
                 NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-                exit(-1);  // Fail
             }
             [[self tableView] reloadData];
         }];
     }
+    [self performFetch];
+    [[self tableView] reloadData];
+}
+
+-(void)performFetch{
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
         // Update to handle the error appropriately.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         exit(-1);  // Fail
     }
-    [[self tableView] reloadData];
+}
 
+-(NSFetchedResultsController *)fetchedResultsController{
+    if (_fetchedResultsController == nil) {
+        NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
+        
+        fetchRequest.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES]];
+        [fetchRequest setFetchBatchSize:20];
+        
+        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[NSManagedObjectContext MR_contextForCurrentThread] sectionNameKeyPath:nil cacheName:nil];
+        
+        _fetchedResultsController.delegate = self;
+    }
+    return _fetchedResultsController;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -78,6 +89,12 @@
     if (statusBarHidden) {
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     }
+    [self performFetch];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    self.fetchedResultsController = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -138,20 +155,19 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
     [self.tableView endUpdates];
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 -(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath*)indexPath{
     Book * book = self.fetchedResultsController.fetchedObjects[indexPath.row];
-    
-    cell.textLabel.text = [book title];
+    LEGBookTableViewCell * bookCell = (LEGBookTableViewCell *)cell;
+    [bookCell setBookTitleText:[book title]];
+    bookCell.author.text = [book author];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
@@ -164,11 +180,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cellIdentifier = @"CellIdentifier";
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    [tableView registerNib:[UINib nibWithNibName:@"LEGBookTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentifier];
+    LEGBookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 95;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -181,7 +201,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 // Override to support editing the table view.

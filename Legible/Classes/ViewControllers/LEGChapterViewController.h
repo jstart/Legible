@@ -16,8 +16,9 @@
 @property (nonatomic, strong) UIWebView * webView;
 @property (nonatomic, strong) NSNumber * chapterIndex;
 @property (nonatomic, strong) NSNumber * currentPageNumber;
+@property (nonatomic, strong) NSNumber * pageToScrollTo;
 
 +(LEGChapterViewController *)pageViewControllerAtIndex:(NSInteger)pageIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size;
-+(LEGChapterViewController *)pageViewControllerAtChapterIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size;
++(LEGChapterViewController *)chapterViewControllerAtIndex:(NSInteger)chapterIndex epubContentPager:(LEGEpubContentPager *) epubContentPager size:(CGSize)size;
 
 @end
